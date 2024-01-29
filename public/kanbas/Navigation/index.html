@@ -1,36 +1,95 @@
+<!--References: https://getbootstrap.com/docs/5.0/examples/sidebars/-->
+
 <html>
 <head>
     <title>Kanbas Navigation</title>
+    <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet" />
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
 </head>
 <body>
-    <ul>
-        <li>
-            <a href="/Kanbas/Account/Profile/screen.html">Account</a>
-        </li>
-        <li>
-            <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
-        </li>
-        <li>
-            <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
-        </li>
-        <li>
-            <a href="/Kanbas/Calendar/index.html">Calendar</a>
-        </li>
-        <li>
-            <a href="/Kanbas/Inbox/index.html">Inbox</a>
-        </li>
-        <li>
-            <a href="/kanbas/History/index.html">History</a>
-        </li>
-        <li>
-            <a href="kanbas/Studio/index.html">Studio</a>
-        </li>
-        <li>
-            <a href="kanbas/Commons/index.html">Commons</a>
-        </li>
-        <li>
-            <a href="kanbas/Help/index.html">Help</a>
-        </li>
-    </ul>
+
+    <div class="d-flex flex-column flex-shrink-1 align-items-center text-white custom-container" id="nav-sidebar">
+        <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white">
+            <img width="80" height="80" src="../../images/neu_logo.png" alt="Northeastern University Logo">
+        </a>
+
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="/Kanbas/Account/Profile/screen.html" class="nav-link">
+                    <div class="d-flex flex-column align-items-center">
+                        <i id="account-icon" class="fa-solid fa-circle-user fa-2x"></i>
+                        Account
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Kanbas/Dashboard/screen.html" class="nav-link active">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-gauge-high fa-2x"></i>
+                        Dashboard
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Kanbas/Courses/Home/screen.html" class="nav-link">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-book fa-2x"></i>
+                        Courses
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Kanbas/Calendar/index.html" class="nav-link">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa fa-calendar fa-2x"></i>
+                        Calendar
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Kanbas/Inbox/index.html" class="nav-link">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-inbox fa-2x"></i>
+                        Inbox
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/kanbas/History/index.html" class="nav-link">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-clock fa-2x"></i>
+                        History
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="kanbas/Studio/index.html" class="nav-link">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-desktop fa-2x"></i>
+                        Studio
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="kanbas/Commons/index.html" class="nav-link">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+                        Commons
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="kanbas/Help/index.html" class="nav-link">
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-circle-question fa-2x"></i>
+                        Help
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
 </body>
 </html>
