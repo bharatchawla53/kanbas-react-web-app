@@ -1,0 +1,472 @@
+<html>
+<head>
+    <title>Kanbas Dashboard</title>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Kanbas/Dashboard/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+</head>
+<body>
+    <div class="d-flex">
+            <div class="d-flex flex-column flex-shrink-1 align-items-center text-white custom-container" id="nav-sidebar">
+                <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white">
+                    <img width="80" height="80" src="../../images/neu_logo.png" alt="Northeastern University Logo">
+                </a>
+
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="/Kanbas/Account/Profile/screen.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i id="account-icon" class="fa-solid fa-circle-user fa-2x"></i>
+                                Account
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kanbas/Dashboard/screen.html" class="nav-link active">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-gauge-high fa-2x"></i>
+                                Dashboard
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kanbas/Courses/Home/screen.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-book fa-2x"></i>
+                                Courses
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kanbas/Calendar/index.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa fa-calendar fa-2x"></i>
+                                Calendar
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kanbas/Inbox/index.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-inbox fa-2x"></i>
+                                Inbox
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/kanbas/History/index.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-clock fa-2x"></i>
+                                History
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="kanbas/Studio/index.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-desktop fa-2x"></i>
+                                Studio
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="kanbas/Commons/index.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+                                Commons
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="kanbas/Help/index.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-circle-question fa-2x"></i>
+                                Help
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container-fluid">
+                <div class="p-4">
+                    <h1>Dashboard</h1>
+                    <hr />
+                    <h2>Published Courses (12)</h2>
+                    <hr />
+
+                    <div class="d-flex flex-row flex-wrap row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4" id="card-container">
+                        <div class="col">
+                            <div class="card">
+                                <div>
+                                    <button type="button" class="card-img-button">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                </div>
+                                <img src="../../../images/reactjs.jpg" class="card-img-top" alt="" />
+
+                                <div class="card-body d-flex flex-column">
+                                    <a href="/Kanbas/Courses/Home/screen.html" class="mb-2 card-link">
+                                        <h5 class="card-title text-truncate">
+                                            <span class="card-text">
+                                                CS 4550 12631 Web Development
+                                            </span>
+                                        </h5>
+                                        <h5 class="card-subtitle">
+                                            CS4550.12631.202410
+                                        </h5>
+                                        <p class="card-text text-truncate">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </a>
+                                    <a href="#" class="card-icon">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div>
+                                    <button type="button" class="card-img-button">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                </div>
+                                <img src="../../../images/reactjs.jpg" class="card-img-top" alt="" />
+
+                                <div class="card-body d-flex flex-column">
+                                    <a href="/Kanbas/Courses/Home/screen.html" class="mb-2 card-link">
+                                        <h5 class="card-title text-truncate">
+                                            <span class="card-text">
+                                                CS 4550 12631 Web Development
+                                            </span>
+                                        </h5>
+                                        <h5 class="card-subtitle">
+                                            CS4550.12631.202410
+                                        </h5>
+                                        <p class="card-text text-truncate">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </a>
+                                    <a href="#" class="card-icon">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div>
+                                    <button type="button" class="card-img-button">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                </div>
+                                <img src="../../../images/reactjs.jpg" class="card-img-top" alt="" />
+
+                                <div class="card-body d-flex flex-column">
+                                    <a href="/Kanbas/Courses/Home/screen.html" class="mb-2 card-link">
+                                        <h5 class="card-title text-truncate">
+                                            <span class="card-text">
+                                                CS 4550 12631 Web Development
+                                            </span>
+                                        </h5>
+                                        <h5 class="card-subtitle">
+                                            CS4550.12631.202410
+                                        </h5>
+                                        <p class="card-text text-truncate">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </a>
+                                    <a href="#" class="card-icon">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div>
+                                    <button type="button" class="card-img-button">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                </div>
+                                <img src="../../../images/reactjs.jpg" class="card-img-top" alt="" />
+
+                                <div class="card-body d-flex flex-column">
+                                    <a href="/Kanbas/Courses/Home/screen.html" class="mb-2 card-link">
+                                        <h5 class="card-title text-truncate">
+                                            <span class="card-text">
+                                                CS 4550 12631 Web Development
+                                            </span>
+                                        </h5>
+                                        <h5 class="card-subtitle">
+                                            CS4550.12631.202410
+                                        </h5>
+                                        <p class="card-text text-truncate">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </a>
+                                    <a href="#" class="card-icon">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div>
+                                    <button type="button" class="card-img-button">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                </div>
+                                <img src="../../../images/reactjs.jpg" class="card-img-top" alt="" />
+
+                                <div class="card-body d-flex flex-column">
+                                    <a href="/Kanbas/Courses/Home/screen.html" class="mb-2 card-link">
+                                        <h5 class="card-title text-truncate">
+                                            <span class="card-text">
+                                                CS 4550 12631 Web Development
+                                            </span>
+                                        </h5>
+                                        <h5 class="card-subtitle">
+                                            CS4550.12631.202410
+                                        </h5>
+                                        <p class="card-text text-truncate">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </a>
+                                    <a href="#" class="card-icon">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div>
+                                    <button type="button" class="card-img-button">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                </div>
+                                <img src="../../../images/reactjs.jpg" class="card-img-top" alt="" />
+
+                                <div class="card-body d-flex flex-column">
+                                    <a href="/Kanbas/Courses/Home/screen.html" class="mb-2 card-link">
+                                        <h5 class="card-title text-truncate">
+                                            <span class="card-text">
+                                                CS 4550 12631 Web Development
+                                            </span>
+                                        </h5>
+                                        <h5 class="card-subtitle">
+                                            CS4550.12631.202410
+                                        </h5>
+                                        <p class="card-text text-truncate">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </a>
+                                    <a href="#" class="card-icon">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div>
+                                    <button type="button" class="card-img-button">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                </div>
+                                <img src="../../../images/reactjs.jpg" class="card-img-top" alt="" />
+
+                                <div class="card-body d-flex flex-column">
+                                    <a href="/Kanbas/Courses/Home/screen.html" class="mb-2 card-link">
+                                        <h5 class="card-title text-truncate">
+                                            <span class="card-text">
+                                                CS 4550 12631 Web Development
+                                            </span>
+                                        </h5>
+                                        <h5 class="card-subtitle">
+                                            CS4550.12631.202410
+                                        </h5>
+                                        <p class="card-text text-truncate">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </a>
+                                    <a href="#" class="card-icon">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div>
+                                    <button type="button" class="card-img-button">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                </div>
+                                <img src="../../../images/reactjs.jpg" class="card-img-top" alt="" />
+
+                                <div class="card-body d-flex flex-column">
+                                    <a href="/Kanbas/Courses/Home/screen.html" class="mb-2 card-link">
+                                        <h5 class="card-title text-truncate">
+                                            <span class="card-text">
+                                                CS 4550 12631 Web Development
+                                            </span>
+                                        </h5>
+                                        <h5 class="card-subtitle">
+                                            CS4550.12631.202410
+                                        </h5>
+                                        <p class="card-text text-truncate">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </a>
+                                    <a href="#" class="card-icon">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div>
+                                    <button type="button" class="card-img-button">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                </div>
+                                <img src="../../../images/reactjs.jpg" class="card-img-top" alt="" />
+
+                                <div class="card-body d-flex flex-column">
+                                    <a href="/Kanbas/Courses/Home/screen.html" class="mb-2 card-link">
+                                        <h5 class="card-title text-truncate">
+                                            <span class="card-text">
+                                                CS 4550 12631 Web Development
+                                            </span>
+                                        </h5>
+                                        <h5 class="card-subtitle">
+                                            CS4550.12631.202410
+                                        </h5>
+                                        <p class="card-text text-truncate">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </a>
+                                    <a href="#" class="card-icon">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div>
+                                    <button type="button" class="card-img-button">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                </div>
+                                <img src="../../../images/reactjs.jpg" class="card-img-top" alt="" />
+
+                                <div class="card-body d-flex flex-column">
+                                    <a href="/Kanbas/Courses/Home/screen.html" class="mb-2 card-link">
+                                        <h5 class="card-title text-truncate">
+                                            <span class="card-text">
+                                                CS 4550 12631 Web Development
+                                            </span>
+                                        </h5>
+                                        <h5 class="card-subtitle">
+                                            CS4550.12631.202410
+                                        </h5>
+                                        <p class="card-text text-truncate">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </a>
+                                    <a href="#" class="card-icon">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div>
+                                    <button type="button" class="card-img-button">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                </div>
+                                <img src="../../../images/reactjs.jpg" class="card-img-top" alt="" />
+
+                                <div class="card-body d-flex flex-column">
+                                    <a href="/Kanbas/Courses/Home/screen.html" class="mb-2 card-link">
+                                        <h5 class="card-title text-truncate">
+                                            <span class="card-text">
+                                                CS 4550 12631 Web Development
+                                            </span>
+                                        </h5>
+                                        <h5 class="card-subtitle">
+                                            CS4550.12631.202410
+                                        </h5>
+                                        <p class="card-text text-truncate">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </a>
+                                    <a href="#" class="card-icon">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <div>
+                                    <button type="button" class="card-img-button">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                </div>
+                                <img src="../../../images/reactjs.jpg" class="card-img-top" alt="" />
+
+                                <div class="card-body d-flex flex-column">
+                                    <a href="/Kanbas/Courses/Home/screen.html" class="mb-2 card-link">
+                                        <h5 class="card-title text-truncate">
+                                            <span class="card-text">
+                                                CS 4550 12631 Web Development
+                                            </span>
+                                        </h5>
+                                        <h5 class="card-subtitle">
+                                            CS4550.12631.202410
+                                        </h5>
+                                        <p class="card-text text-truncate">
+                                            202410_1 Fall 2023 Semester Full Term Grad
+                                        </p>
+                                    </a>
+                                    <a href="#" class="card-icon">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+</body>
+</html>
