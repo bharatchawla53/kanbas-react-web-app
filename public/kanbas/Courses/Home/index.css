@@ -1,0 +1,130 @@
+.btn {
+    color: #2d3b45;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn-outline-secondary:hover {
+    background-color: black;
+}
+
+.dropdown:hover .btn-outline-secondary {
+    background-color: lightgrey;
+    color: #2d3b45;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: red;
+    color: white;
+}
+
+.fa-circle-check {
+    color: green;
+}
+
+.btn-danger {
+    color: white; 
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn-danger:hover {
+    background: #2d3b45;
+    border-color: #c7cdd1;
+}
+
+.fa-sort-down {
+    margin-top: -7px;
+    padding-left: 4px;
+}
+
+.list-group a {
+    color: black; 
+}
+
+.list-group a:hover {
+    text-decoration: none; 
+}
+
+.list-group-item:hover {
+    background-color: #F2F2F2;
+}
+
+.btn-success {
+    color: white;
+}
+
+.btn-success .fa-circle-check {
+    color: white; 
+}
+
+.course-options {
+    margin-right: 6em; 
+}
+
+.notification-badger {
+    color: red; 
+}
+
+.notification-badger span {
+    color: white; 
+}
+
+.to-do {
+    margin-left: -20px; 
+}
+
+.to-do-item {
+    color: red; 
+}
+
+.to-do a:hover {
+    text-decoration: none; 
+}
+
+.to-do-item:hover {
+    text-decoration: none;
+}
+
+.to-do-item-detail {
+    font-size: 0.7em; 
+    text-decoration: underline;
+    color: grey;
+}
+
+.xmark {
+    margin-left: -80px; 
+}
+
+.calendar {
+    margin-left: -2.85em; 
+}
+
+.calendar-option {
+    font-size: 0.8em;
+    color: red; 
+}
+
+.coming-up-item {
+    margin-top: -8px; 
+}
+
+.coming-up-item-detail {
+    font-size: 0.8em; 
+    text-decoration: underline; 
+}
+
+.coming-up-item-detail:hover {
+    text-decoration: none;
+}
+
+.coming-up-item-link {
+    margin-top: -20px;
+}
+
+
+.coming-up-item-link a {
+    font-size: small;
+}

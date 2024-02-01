@@ -1,101 +1,523 @@
 <html>
 <head>
     <title>Home</title>
+    <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet" />
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
 </head>
 <body>
-    <table>
-        <tbody>
-            <tr>
-                <td valign="top">
-                    <button type="button">Collapse All</button>
-                    <button type="button">View Progress</button>
-                    <select>
-                        <option selected>Publish All</option>
-                        <option>Modules</option>
-                    </select>
-                    <button type="button">Module</button>
 
-                    <ul>
-                        <li>
-                            Week 0 - INTRO
-                            <ul>
-                                <li>
-                                    LEARNING OBJECTIVES
-                                    <ul>
-                                        <li>Introduction to the course</li>
-                                        <li>Learn what is Web Development</li>
-                                        <li>Creating a development environment</li>
-                                        <li>Creating a Web Application</li>
-                                        <li>Getting started with the 1st assignment</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    READING
-                                    <ul>
-                                        <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                                        <li>Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    SLIDES
-                                    <ul>
-                                        <li><a href="">Introduction to Web Development Links to an external site.</a></li>
-                                        <li><a href="">Creating an HTTP server with Node.js Links to an external site.</a></li>
-                                        <li><a href="">Creating a React Application Links to an external site.</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Week 1 - HTML
-                            <ul>
-                                <li>
-                                    LEARNING OBJECTIVES
-                                    <ul>
-                                        <li>Learn how to create user interfaces with HTML</li>
-                                        <li>Keep working on assignment 1</li>
-                                        <li>Deploy the assignment to Netlify</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    READING
-                                    <ul>
-                                        <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                                        <li>Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
+    <div class="d-flex flex-row me-xxl-3">
+        <div class="d-flex flex-column mx-4">
+            <div class="d-flex flex-row ms-auto float-end mb-1" id="courses-content-top-buttons">
+                <button class="btn btn-outline-secondary me-1 ellipsis" type="button">
+                    Collapse All
+                </button>
+                <button class="btn btn-outline-secondary me-1 ellipsis" type="button">
+                    View Progress
+                </button>
+
+                <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle me-1" data-bs-toggle="dropdown"
+                            aria-expanded="false" type="button">
+                        <i class="fa-regular fa-circle-check"></i>
+                        Publish All
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-check"></i>Publish all modules and items</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-check"></i>Publish modules only</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-ban"></i>Unpublish all modules and items</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-ban"></i>Unpublish all modules only</a></li>
                     </ul>
-                </td>
+                </div>
 
-                <td valign="top">
-                    <h2>Course Status</h2>
+                <button class="btn btn-danger me-1 ellipsis" type="button">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    Module
+                </button>
 
-                    <button type="button">Unpublish</button>
-                    <button type="button">Published</button>
+                <button class="btn btn-outline-secondary me-1" type="button">
+                    <i class="fa fa-ellipsis-v"
+                       aria-hidden="true"></i>
+                </button>
+            </div>
 
-                    <ul>
-                        <li><a href="">Import Existing Content</a></li>
-                        <li><a href="">Import From Commons</a></li>
-                        <li><a href="">Choose Home Page</a></li>
-                        <li><a href="">View Course Stream</a></li>
-                        <li><a href="">New Announcement</a></li>
-                        <li><a href="">New Analysis</a></li>
-                        <li><a href="">View Course Notifications</a></li>
-                    </ul>
+            <hr>
 
-                    <h2>Coming Up</h2>
-                    <a href="https://www.lipsum.com">View Calendar</a>
+            <div class="list-group p-0 mb-5 rounded-0">
+                <div class="d-flex list-group-item">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fas fa-sort-down"></i>
+                    </div>
+                    <div class="ms-2 me-auto">
+                        <a href="">Week 0 - INTRO</a>
+                    </div>
+                    <div class="d-flex align-items-center title-icons float-end">
+                        <i class="fa fa-circle-check" aria-hidden="true"></i>
+                        <i class="fas fa-sort-down me-3"></i>
+                        <i class="fa fa-plus me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
 
-                    <ul>
-                        <li><a href="">Lecture CS4550 Sep 7 at 11:45am</a></li>
-                        <li><a href="">Lecture CS4550 Sep 11 at 11:45am</a></li>
-                        <li><a href="">Lecture CS5610 Sep 11 at 6:00pm</a></li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-2 me-auto">
+                        <a href="">LEARNING OBJECTIVES</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Introduction to the course</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Learn what is Web Development</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Creating a development environment</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Creating a Web Application</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Getting started with the 1st assignment</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-2 me-auto">
+                        <a href="">READING</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Full Stack Developer - Chapter 1 - Introduction</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-2 me-auto">
+                        <a href="">SLIDES</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Introduction to Web Development Links to an external site</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Creating an HTTP server with Node.js Links to an external site</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Creating a React Application Links to an external site</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="list-group p-0 mb-5 rounded-0">
+                <div class="d-flex list-group-item">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fas fa-sort-down"></i>
+                    </div>
+                    <div class="ms-2 me-auto">
+                        <a href="">Week 1 - HTML</a>
+                    </div>
+                    <div class="d-flex align-items-center title-icons float-end">
+                        <i class="fa fa-circle-check" aria-hidden="true"></i>
+                        <i class="fas fa-sort-down me-3"></i>
+                        <i class="fa fa-plus me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-2 me-auto">
+                        <a href="">LEARNING OBJECTIVES</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Learn how to create user interfaces with HTML</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Keep working on assignment 1</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Deploy the assignment to Netlify</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-2 me-auto">
+                        <a href="">READING</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Full Stack Developer - Chapter 1 - Introduction</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex list-group-item ">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-5 me-auto">
+                        <a href="">Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML</a>
+                    </div>
+                    <div class="d-flex float-end align-items-center">
+                        <i class="fa fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-3 d-none d-xl-block">
+            <div class="d-flex flex-column">
+                <h3>Course Status</h3>
+                <div class="d-flex flex-row gap-1">
+                    <button class="btn btn-outline-secondary btn-5-width">
+                       <i class="fa-solid fa-ban"></i>
+                        Unpublish
+                    </button>
+                    <button class="btn btn-success btn-5-width">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Published
+                    </button>
+                </div>
+
+                <div class="d-flex flex-column mt-2">
+                    <button class="btn btn-outline-secondary mb-1 text-start course-options" type="button">
+                        <i class="fa-solid fa-file-import"></i>
+                        Import Existing Content
+                    </button>
+                    <button class="btn btn-outline-secondary mb-1 text-start course-options" type="button">
+                        <i class="fa-solid fa-file-import"></i>
+                        Import From Commons
+                    </button>
+                    <button class="btn btn-outline-secondary mb-1 text-start course-options" type="button">
+                        <i class="fa-solid fa-bullseye"></i>
+                        Choose Home Page
+                    </button>
+                    <button class="btn btn-outline-secondary mb-1 text-start course-options" type="button">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        View Course Stream
+                    </button>
+                    <button class="btn btn-outline-secondary mb-1 text-start course-options" type="button">
+                        <i class="fa-solid fa-bell"></i>
+                        New Announcement
+                    </button>
+                    <button class="btn btn-outline-secondary mb-1 text-start course-options" type="button">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        New Analysis
+                    </button>
+                    <button class="btn btn-outline-secondary mb-1 text-start course-options" type="button">
+                        <i class="fa-solid fa-bell"></i>
+                        View Course Notifications
+                    </button>
+                </div>
+
+                <div class="d-flex flex-column">
+                    <h5 class="mt-2 mb-0">To Do</h5>
+                    <hr class="course-options" />
+                </div>
+                
+                <div class="d-flex flex-row">
+                    <div class="col-2 d-flex align-items-center">
+                        <span class="fa-stack fa-2xs d-block notification-badger">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <span class="fa fa-stack-1x text-center">
+                                1
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="col-9">
+                        <div class="d-flex flex-column to-do">
+                            <div>
+                                <a href="#" class="to-do-item">
+                                    Grade A1 - ENV + HTML
+                                </a>
+                                <br />
+                                <a href="#" class="to-do-item-detail">
+                                    100 points Sep 18 at 11:59pm
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 d-flex xmark">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column mt-3">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="col-7">
+                            <h5 class="mb-0 text-nowrap">Coming Up</h5>
+                        </div>
+                        <div class="col-5 text-nowrap calendar">
+                            <i class="fa-solid fa-calendar"></i>
+                            <a href="#" class="calendar-option"> View Calendar</a>
+                        </div>
+                    </div>
+                    <hr class="course-options" />
+
+                    <div class="mb-2">
+                        <div class="d-flex flex-row">
+                            <div class="col-1">
+                                <i class="fa-solid fa-calendar"></i>
+                            </div>
+                            <div class="col-11 d-flex flex-column">
+                                <div class="row coming-up-item">
+                                    <a href="#" class="to-do-item">Lecture</a>
+                                    <div class="coming-up-item-detail mb-3">
+                                        CS4550.12631.202410
+                                        <br>
+                                        Sep 11 at 11:45am
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row mb-2">
+                            <div class="col-1">
+                                <i class="fa-solid fa-calendar"></i>
+                            </div>
+                            <div class="col-11 d-flex flex-column">
+                                <div class="row coming-up-item">
+                                    <a href="#" class="to-do-item">CS5610 06 SP24 Lecture</a>
+                                    <div class="coming-up-item-detail mb-3">
+                                        CS5610.12631.202410
+                                        <br>
+                                        Sep 11 at 11:45am
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row mb-2">
+                            <div class="col-1">
+                                <i class="fa-solid fa-calendar"></i>
+                            </div>
+                            <div class="col-11 d-flex flex-column">
+                                <div class="row coming-up-item">
+                                    <a href="#" class="to-do-item text-wrap">CS5610 Web Developoment Summer 1 2024 - LECTURE</a>
+                                    <div class="coming-up-item-detail mb-3">
+                                        CS5610.12631.202410
+                                        <br>
+                                        Sep 11 at 11:45am
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="coming-up-item-link">
+                        <a href="#" class="to-do-item"> 12 more in the next week....</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div> 
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                crossorigin="anonymous"></script>
 </body>
 </html>
