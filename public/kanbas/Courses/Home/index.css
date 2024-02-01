@@ -48,6 +48,16 @@
     text-decoration: none; 
 }
 
+.list-group-item {
+    font-weight: 500;
+}
+
+
+.list-group-item.selected {
+    border-left: 3px solid;
+    border-left-color: green;
+}
+
 .list-group-item:hover {
     background-color: #F2F2F2;
 }
@@ -61,7 +71,7 @@
 }
 
 .course-options {
-    margin-right: 6em; 
+    margin-right: 5em; 
 }
 
 .notification-badger {
@@ -128,3 +138,24 @@
 .coming-up-item-link a {
     font-size: small;
 }
+
+.breadcrumb-item a {
+    color: red;
+    font-size: large;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: none; 
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    display: block; 
+}
+
+.course-status-wrapper {
+    margin-left: 40px; 
+}
+

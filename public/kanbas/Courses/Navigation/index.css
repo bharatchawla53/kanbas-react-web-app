@@ -25,8 +25,12 @@
 }
 
 #course-nav-sidebar li a {
-    text-decoration: none; 
     color: red; 
+}
+
+#course-nav-sidebar li a:hover {
+    text-decoration: none; 
+   
 }
 
 #course-nav-sidebar li.active {
