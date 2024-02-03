@@ -1,0 +1,73 @@
+.btn {
+    color: #2d3b45;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn-outline-secondary:hover {
+    background-color: black;
+}
+
+.dropdown:hover .btn-outline-secondary {
+    background-color: lightgrey;
+    color: #2d3b45;
+}
+
+.btn-danger {
+    color: white;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn-danger:hover {
+    background: #2d3b45;
+    border-color: #c7cdd1;
+}
+
+.dropdown:hover .btn-outline-secondary {
+    background-color: lightgrey;
+    color: #2d3b45;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: red;
+    color: white;
+}
+
+.name-link {
+    color: red;
+    text-decoration: none; 
+}
+
+.table th {
+    font-weight: 500;
+    font-size: 0.85em; 
+}
+
+.table td {
+    font-size: 0.90em; 
+}
+
+.arrow-bracket-button {
+    margin: 5px;
+    align-items: center;
+    z-index: 2; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+}
+
+.form-control:focus {
+    border-color: red;
+    color: black;
+    border-color: red;
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.45);
+    text-align: center; 
+}
+
+.form-control::selection {
+    background-color: blue; 
+    color: white; 
+}
