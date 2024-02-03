@@ -1,0 +1,66 @@
+.btn {
+    color: #2d3b45;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn-outline-secondary:hover {
+    background-color: black;
+}
+
+.dropdown:hover .btn-outline-secondary {
+    background-color: lightgrey;
+    color: #2d3b45;
+}
+
+.btn-danger {
+    color: white;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn-danger:hover {
+    background: #2d3b45;
+    border-color: #c7cdd1;
+}
+
+.fa-sort-down {
+    margin-top: -7px;
+    padding-left: 4px;
+}
+
+.list-group a {
+    color: black;
+}
+
+.list-group a:hover {
+    text-decoration: none;
+}
+
+.list-group-item {
+font-weight: 500;
+}
+
+
+.list-group-item.selected {
+    border-left: 3px solid;
+    border-left-color: green;
+}
+
+.list-group-item:hover {
+    background-color: #F2F2F2;
+}
+
+.fa-pen-to-square, .fa-circle-check {
+    color: green;
+}
+
+.plus-icon {
+    margin-left: -10px; 
+}
+
+.search-assignment {
+    width: 25%;
+}

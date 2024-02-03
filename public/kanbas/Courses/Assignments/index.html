@@ -1,160 +1,219 @@
 <html>
 <head>
     <title>Assignments</title>
+    <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet" />
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Assignments/index.css" />
 </head>
 <body>
 
-    <input type="text" placeholder="Search for Assignments">
-    <button type="button">Group</button>
-    <button type="button">Assignment</button>
+    <div class="container-fluid d-flex flex-row me-3">
+        <div class="col-12 d-flex flex-column mx-4">
+            <div class="d-flex mb-1 justify-content-between">
+                <input type="text" class="form-control w-25" placeholder="Search for Assignments" />
 
-    <select>
-        <option selected>Edit Assignment Dates</option>
-        <option>Edit</option>
-        <option>Speed Grader</option>
-        <option>Duplicate</option>
-        <option>Delete</option>
-        <option>Move To...</option>
-        <option>Send To...</option>
-        <option>Copy To...</option>
-        <option>Share to Commons</option>
-    </select>
+                <div>
+                    <button class="btn btn-outline-secondary me-1 ellipsis" type="button">
+                        <i class="fa-solid fa-plus"></i>
+                        Group
+                    </button>
+                    <button class="btn btn-danger me-1 ellipsis" type="button">
+                        <i class="fa-solid fa-plus"></i>
+                        Assignment
+                    </button>
+                    <button class="btn btn-outline-secondary me-1" type="button">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </button>
+                </div>
+            </div>
+            <hr />
 
-    <hr />
+            <div class="list-group p-0 mb-5 rounded-0">
+                <div class="d-flex list-group-item">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fas fa-sort-down"></i>
+                    </div>
+                    <div class="ms-2 me-auto">
+                        <a href="">Assignments</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-pill border border-dark-subtle me-3">
+                            <span class="mx-3 ">40% of Total</span>
+                        </div>
+                        <i class="fa-solid fa-plus me-3 plus-icon" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
 
 
-    <span>
-        <b>ASSIGNMENTS 40% of Total</b>
-    </span>
+                <div class="d-flex list-group-item align-items-center selected">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-3">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <div class="d-flex flex-column ms-3 me-auto">
+                        <div>
+                            <a href="../Assignments/Edit.html">
+                                A1 SETUP
+                            </a>
+                        </div>
+                        <div>
+                            Week 0 - SETUP - Week starting on Monday September 5th (9/5/2024) Module |
+                        </div>
+                        <div>
+                            <strong>Due</strong> Sep 18, 2024 at 11:59pm | 100 pts
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center float-end">
+                        <i class="fa-solid fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
 
-    <span>
-        <select>
-            <option selected>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-        </select>
-    </span>
+                <div class="d-flex list-group-item align-items-center selected">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-3">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <div class="d-flex flex-column ms-3 me-auto">
+                        <div>
+                            <a href="../Assignments/Edit.html">
+                                A2 HTML
+                            </a>
+                        </div>
+                        <div>
+                            Week 1 - HTML - Week starting on Monday September 12th (9/5/2024) Module |
+                        </div>
+                        <div>
+                            <strong>Due</strong> Sep 25, 2024 at 11:59pm | 100 pts
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center float-end">
+                        <i class="fa-solid fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
 
+                <div class="d-flex list-group-item align-items-center selected">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-3">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <div class="d-flex flex-column ms-3 me-auto">
+                        <div>
+                            <a href="../Assignments/Edit.html">
+                                A3 CSS
+                            </a>
+                        </div>
+                        <div>
+                            Week 2 - CSS - Week starting on Monday September 19th (9/5/2024) Module |
+                        </div>
+                        <div>
+                            <strong>Due</strong> Otc 2, 2024 at 11:59pm | 100 pts
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center float-end">
+                        <i class="fa-solid fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
 
-    <ul>
-        <li>
-            <a href="">A1 - ENV + HTML</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-            <a href="">A2 - CSS + BOOTSTRAP</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-            <a href="">A3 - JS + REACT</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-            <a href="">A4 - STATE + REDUX</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-            <a href="">A5 - NODE + SESSION</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-            <a href="">A6 - MONGO + MONGOGOOSE</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-    </ul>
+                <div class="d-flex list-group-item align-items-center selected">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-3">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <div class="d-flex flex-column ms-3 me-auto">
+                        <div>
+                            <a href="../Assignments/Edit.html">
+                                A4 BOOTSTRAP
+                            </a>
+                        </div>
+                        <div>
+                            Week 3 - BOOTSTRAP - Week starting on Monday September 26th (9/5/2024) Module |
+                        </div>
+                        <div>
+                            <strong>Due</strong> Otc 10, 2024 at 11:59pm | 100 pts
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center float-end">
+                        <i class="fa-solid fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
 
-    <span>
-        <b>QUIZZES 10% of Total</b>
-    </span>
+                <div class="d-flex list-group-item align-items-center selected">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-3">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <div class="d-flex flex-column ms-3 me-auto">
+                        <div>
+                            <a href="../Assignments/Edit.html">
+                                A5 JAVASCRIPT
+                            </a>
+                        </div>
+                        <div>
+                            Week 4 - JAVASCRIPT - Week starting on Monday October 3rd (9/5/2024) Module |
+                        </div>
+                        <div>
+                            <strong>Due</strong> Otc 16, 2024 at 11:59pm | 100 pts
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center float-end">
+                        <i class="fa-solid fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
 
-    <span>
-        <select>
-            <option selected>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-        </select>
-    </span>
-    <ul>
-        <li>
-            <a href="">Q1 - HTML</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-            <a href="">Q2 - CSS</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-            <a href="">Q3 - JS, ES6</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-            <a href="">Q4 - NODE</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-            <a href="">Q5 - MONGO</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-    </ul>
+                <div class="d-flex list-group-item align-items-center selected">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <div class="ms-3">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <div class="d-flex flex-column ms-3 me-auto">
+                        <div>
+                            <a href="../Assignments/Edit.html">
+                                A6 REACT
+                            </a>
+                        </div>
+                        <div>
+                            Week 5 - REACT - Week starting on Monday October 10th (9/5/2024) Module |
+                        </div>
+                        <div>
+                            <strong>Due</strong> Otc 24, 2024 at 11:59pm | 100 pts
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center float-end">
+                        <i class="fa-solid fa-circle-check me-3" aria-hidden="true"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
 
-    <span>
-        <b>EXAMS 20% of Total</b>
-    </span>
+            </div>
+            </div>
+        </div>
 
-    <span>
-        <select>
-            <option selected>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-        </select>
-    </span>
-    <ul>
-        <li>
-            <a href="">Midterm</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-        <li>
-            <a href="">Final</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-    </ul>
-
-    <span>
-        <b>PROJECT 30% of Total</b>
-    </span>
-
-    <span>
-        <select>
-            <option selected>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-        </select>
-    </span>
-    <ul>
-        <li>
-            <a href="">Project</a> <br />
-            <a href="">Multiple Modules</a> | Not Available Yet
-        </li>
-    </ul>
 </body>
 </html>
