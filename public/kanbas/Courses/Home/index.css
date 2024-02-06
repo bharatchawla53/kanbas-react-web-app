@@ -236,7 +236,7 @@
     transition: transform 0.3s ease-in-out;
 }
 
-img {
+#canvas-icon {
     width: 200px;
     height: 80px; 
 }
