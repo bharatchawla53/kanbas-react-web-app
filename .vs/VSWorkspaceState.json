@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\public\\kanbas",
-    "\\public\\kanbas\\Navigation"
+    "\\public\\kanbas\\Courses\\Assignments\\Edit"
   ],
-  "SelectedNode": "\\public\\kanbas\\Navigation\\index.css",
+  "SelectedNode": "\\public\\kanbas",
   "PreviewInSolutionExplorer": false
 }
