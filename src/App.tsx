@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
+/*import logo from './logo.svg';*/
 import './App.css';
+import Labs from "./Labs";
 
 function App() {
   return (
@@ -20,8 +21,10 @@ function App() {
         </a>
       </header>
     </div>*/
-      <h1>Hello World!</h1>
-
+    <div>
+    <Labs/>
+          <h1>Hello World!</h1>
+    </div>
   );
 }
 
