@@ -1,6 +1,9 @@
+import Nav from "../Nav";
+
 function Kanbas() {
     return (
-        <div className="container">
+        <div>
+            <Nav />
             <h1>Kanbas</h1>
         </div>
     );
