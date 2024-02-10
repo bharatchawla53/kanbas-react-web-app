@@ -1,9 +1,9 @@
 #nav-sidebar {
-    min-height: max(100vh, 100%); 
+    min-height: max(100vh, 100%);
 }
 
 .custom-container {
-    width: 80px; 
+    width: 80px;
     background-color: black;
 }
 
@@ -30,7 +30,7 @@
 .nav-pills .nav-link div i {
     color: red;
     font-size: 2em;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 #account-icon {
