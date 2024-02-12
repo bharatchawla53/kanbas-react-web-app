@@ -1,11 +1,8 @@
-#nav-sidebar {
-    /* min-height: max(100vh, 100%); */
-    height: 100%;
-}
-
-.custom-container {
+.left-menu-nav {
     width: 80px;
     background-color: black;
+    min-height: max(100vh, 100%);
+    position: fixed;
 }
 
 .nav-pills .nav-item .nav-link {
@@ -28,3 +25,15 @@
 .sidenav-icon {
     color: red;
 }
+
+/* 
+@media screen and (max-width: 992px) {
+
+     Adjust the max-width as needed 
+    .left-menu-nav {
+        width: 0;
+        Collapse the container 
+        overflow: hidden;
+         Hide the content 
+    }
+} */
