@@ -9,8 +9,9 @@
     border-radius: 0;
     color: white;
     text-decoration: none;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     padding: 3px;
+    font-size: 14px;
 }
 
 .nav-pills .nav-item .nav-link:hover {

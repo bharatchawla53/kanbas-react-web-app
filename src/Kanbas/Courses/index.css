@@ -1,0 +1,13 @@
+.course-main {
+    margin-left: 90px;
+    padding: 20px 15px;
+}
+
+.breadcrumb-item a {
+    color: red;
+    font-size: large;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: none;
+}
