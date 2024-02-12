@@ -3,6 +3,10 @@
     padding: 20px 15px;
 }
 
+.custom-breadcrumb {
+    --bs-breadcrumb-divider: '>';
+}
+
 .breadcrumb-item a {
     color: red;
     font-size: large;
@@ -10,4 +14,10 @@
 
 .breadcrumb-item a:hover {
     text-decoration: none;
+}
+
+.course-routes {
+    position: fixed;
+    top: 80px;
+    left: 320px;
 }
