@@ -20,7 +20,7 @@ function KanbasNavigation() {
     const { pathname } = useLocation();
 
     return (
-        <div className="left-menu-nav">
+        <div className="d-flex flex-column flex-shrink-1 align-items-center text-white left-menu-nav">
             <Link to={`/Kanbas/Dashboard`} className="d-flex mb-2">
                 <img width="80" height="80" src="../images/neu_logo.png" alt="Northeastern University Logo"></img>
             </Link>

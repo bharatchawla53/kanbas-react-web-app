@@ -6,7 +6,7 @@ import './index.css';
 function Dashboard() {
     return (
         <>
-            <div className="main" >
+            <div className="container-fluid main">
                 <h1>Dashboard</h1>
                 <hr />
                 <h2>Published Courses (3)</h2>
