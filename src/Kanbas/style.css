@@ -39,3 +39,16 @@ body * {
     color: green;
     font-size: 21px;
 }
+
+.no-spacing-ellipsis {
+    margin-left: -10px;
+}
+
+.sort-down {
+    margin-left: -5px;
+    margin-top: -7px;
+}
+
+.green-icon {
+    color: green;
+}
