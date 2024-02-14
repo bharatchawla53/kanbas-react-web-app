@@ -1,0 +1,78 @@
+.btn-success {
+    color: white;
+}
+
+.btn-success .fa-check-circle {
+    color: white;
+}
+
+.notification-badger {
+    color: red;
+}
+
+.notification-badger span {
+    color: white;
+}
+
+.notification-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+}
+
+.badge {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 2px 6px;
+}
+
+.to-do {
+    margin-left: -10px;
+}
+
+.to-do-item {
+    color: red;
+}
+
+.to-do a:hover {
+    text-decoration: none;
+}
+
+.to-do-item:hover {
+    text-decoration: none;
+}
+
+.to-do-item-detail {
+    font-size: 0.7em;
+    text-decoration: underline;
+    color: grey;
+}
+
+.calendar-option {
+    font-size: 0.8em;
+    color: red;
+}
+
+.coming-up-item {
+    margin-top: -8px;
+}
+
+.coming-up-item-detail {
+    font-size: 0.8em;
+    text-decoration: underline;
+}
+
+.coming-up-item-detail:hover {
+    text-decoration: none;
+}
+
+.coming-up-item-link {
+    margin-top: -20px;
+}

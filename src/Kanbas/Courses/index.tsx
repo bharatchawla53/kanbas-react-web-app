@@ -1,10 +1,12 @@
 import { useParams } from "react-router";
 import { courses } from "../Database";
 import { HiMiniBars3 } from "react-icons/hi2";
+import { FaGlasses } from "react-icons/fa";
 import { Link, useLocation, Navigate, Route, Routes } from "react-router-dom";
 import CourseNavigation from "./Navigation";
 import Modules from "./Modules";
 import "./index.css"
+import Home from "./Home";
 
 function Courses() {
 
@@ -32,6 +34,12 @@ function Courses() {
                         </li>
                     </ol>
                 </nav>
+                <div className="ms-auto float-end">
+                    <a href="" className="btn btn-outline-secondary ellipsis">
+                        <FaGlasses className="fa-glasses" />
+                        Student View
+                    </a>
+                </div>
             </div>
             <hr />
 
@@ -41,7 +49,7 @@ function Courses() {
                 <div className="course-routes">
                     <Routes>
                         <Route path="/" element={<Navigate to="Home" />} />
-                        <Route path="Home" element={<h1>Home</h1>} />
+                        <Route path="Home" element={<Home />} />
                         <Route path="Modules" element={<Modules />} />
                         <Route path="Piazza" element={<h1>Piazza</h1>} />
                         <Route path="Zoom Meetings" element={<h1>Zoom Meetings</h1>} />
