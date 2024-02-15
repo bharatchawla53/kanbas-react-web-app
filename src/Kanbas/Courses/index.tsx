@@ -8,6 +8,7 @@ import Modules from "./Modules";
 import "./index.css"
 import Home from "./Home";
 import Assignments from "./Assignments";
+import AssignmentEditor from "./Assignments/Editor";
 
 function Courses() {
 
@@ -18,6 +19,16 @@ function Courses() {
     const pathParts = decodeURIComponent(pathname).split("/");
     const activeBreadcrumb = pathParts[pathParts.length - 1];
 
+    // regex to check if assignment path ends with an ID to show breadcrumb correctly
+    const isAssignmentPath = pathname.includes("/Assignments/");
+    const idMatch = pathname.match(/\/([^/]+)$/);
+    const assignmentId = idMatch ? idMatch[1] : null;
+
+    console.log("isAssignmentPath:", isAssignmentPath);
+    console.log("pathname:", pathname);
+    console.log("idMatch:", idMatch);
+    console.log("assignmentId:", assignmentId);
+
     // TODO make breadcrumb responsive refer to the old code
     return (
         <div className="course-main">
@@ -25,13 +36,30 @@ function Courses() {
                 <HiMiniBars3 size={'2em'} />
                 <nav className="custom-breadcrumb" aria-label="breadcrumb">
                     <ol className="breadcrumb m-0 ms-3">
-                        <li className="breadcrumb-item">
-                            <Link to={`/Kanbas/Courses/${course?._id}/Home`}>
-                                {course?.number}{course?.startDate}
-                            </Link>
-                        </li>
+                        {isAssignmentPath && idMatch ? (
+                            <>
+                                <li className="breadcrumb-item">
+                                    <Link to={`/Kanbas/Courses/${course?._id}/Home`}>
+                                        {course?.number}{course?.startDate}
+                                    </Link>
+                                </li>
+
+                                <li className="breadcrumb-item">
+                                    <Link to={`/Kanbas/Courses/${course?._id}/Assignments`}>
+                                        Assignments
+                                    </Link>
+                                </li>
+                            </>
+                        ) : (
+                            <li className="breadcrumb-item">
+                                <Link to={`/Kanbas/Courses/${course?._id}/Home`}>
+                                    {course?.number}{course?.startDate}
+                                </Link>
+                            </li>
+                        )}
+
                         <li className="breadcrumb-item active" aria-current="page">
-                            {activeBreadcrumb}
+                            {assignmentId ? assignmentId : activeBreadcrumb}
                         </li>
                     </ol>
                 </nav>
@@ -56,7 +84,7 @@ function Courses() {
                         <Route path="Zoom Meetings" element={<h1>Zoom Meetings</h1>} />
                         <Route path="Assignments" element={<Assignments />} />
                         <Route path="Quizzes" element={<h1>Quizzes</h1>} />
-                        <Route path="Assignments/:assignmentId" element={<h1>Assignment Editor</h1>} />
+                        <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
                         <Route path="Grades" element={<h1>Grades</h1>} />
                         <Route path="People" element={<h1>People</h1>} />
                         <Route path="Panopto Video" element={<h1>Panopto Video</h1>} />

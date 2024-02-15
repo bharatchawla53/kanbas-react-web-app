@@ -1,0 +1,20 @@
+.editor-ellipsis {
+    font-size: 15px;
+    margin-left: -12px;
+}
+
+.plus-icon {
+    font-size: 15px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+.btn-add-row {
+    text-align: center;
+    border: 1px dashed #ccc;
+    border-top: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 100%;
+}
