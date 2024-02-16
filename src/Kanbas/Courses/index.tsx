@@ -9,6 +9,7 @@ import "./index.css"
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
+import Grades from "./Grades";
 
 function Courses() {
 
@@ -21,9 +22,14 @@ function Courses() {
 
     // regex to check if assignment path ends with an ID to show breadcrumb correctly
     const isAssignmentPath = pathname.includes("/Assignments/");
-    const idMatch = pathname.match(/\/([^/]+)$/);
-    const assignmentId = idMatch ? idMatch[1] : null;
+    let idMatch = null;
+    let assignmentId = null;
+    if (isAssignmentPath) {
+        idMatch = pathname.match(/\/([^/]+)$/);
+        assignmentId = idMatch ? idMatch[1] : null;
+    }
 
+    console.log("activeBreadcrumb:", activeBreadcrumb);
     console.log("isAssignmentPath:", isAssignmentPath);
     console.log("pathname:", pathname);
     console.log("idMatch:", idMatch);
@@ -85,7 +91,7 @@ function Courses() {
                         <Route path="Assignments" element={<Assignments />} />
                         <Route path="Quizzes" element={<h1>Quizzes</h1>} />
                         <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
-                        <Route path="Grades" element={<h1>Grades</h1>} />
+                        <Route path="Grades" element={<Grades />} />
                         <Route path="People" element={<h1>People</h1>} />
                         <Route path="Panopto Video" element={<h1>Panopto Video</h1>} />
                         <Route path="Discussions" element={<h1>Discussions</h1>} />

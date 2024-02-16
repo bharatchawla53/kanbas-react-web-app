@@ -24,6 +24,54 @@
         "points": 100
     },
     {
+        "_id": "A104",
+        "title": "Aerodynamics Quiz",
+        "course": "RS101",
+        "dueDate": "Oct 18, 2024",
+        "dueTime": "11:59pm",
+        "points": 100
+    },
+    {
+        "_id": "A105",
+        "title": "Flow Analysis",
+        "course": "RS101",
+        "dueDate": "Oct 30, 2024",
+        "dueTime": "11:59pm",
+        "points": 100
+    },
+    {
+        "_id": "A106",
+        "title": "Heating Analysis",
+        "course": "RS101",
+        "dueDate": "Nov 10, 2024",
+        "dueTime": "11:59pm",
+        "points": 100
+    },
+    {
+        "_id": "A107",
+        "title": "Structural Design Task",
+        "course": "RS101",
+        "dueDate": "Nov 19, 2024",
+        "dueTime": "11:59pm",
+        "points": 100
+    },
+    {
+        "_id": "A108",
+        "title": "Orbital Calculations",
+        "course": "RS101",
+        "dueDate": "Nov 28, 2024",
+        "dueTime": "11:59pm",
+        "points": 100
+    },
+    {
+        "_id": "A109",
+        "title": "Systems Engineering Exam",
+        "course": "RS101",
+        "dueDate": "Dec 1, 2024",
+        "dueTime": "11:59pm",
+        "points": 100
+    },
+    {
         "_id": "A201",
         "title": "Aerodynamics Quiz",
         "course": "RS102",
