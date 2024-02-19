@@ -5,7 +5,7 @@ import Courses from "./Courses";
 
 function Kanbas() {
     return (
-        <div className="d-flex">
+        <div className="d-flex flex-row">
             <KanbasNavigation />
             <div style={{ flexGrow: 1 }}>
                 <Routes>

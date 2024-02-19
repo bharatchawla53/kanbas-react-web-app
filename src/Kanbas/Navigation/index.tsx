@@ -20,22 +20,23 @@ function KanbasNavigation() {
     const { pathname } = useLocation();
 
     return (
-        <div className="d-flex flex-column flex-shrink-1 align-items-center text-white left-menu-nav">
-            <Link to={`/Kanbas/Dashboard`} className="d-flex mb-2">
-                <img width="80" height="80" src="../images/neu_logo.png" alt="Northeastern University Logo"></img>
-            </Link>
+        <div className="d-none d-md-block">
+            <div className="d-flex flex-column flex-shrink-1 align-items-center text-white left-menu-nav">
+                <Link to={`/Kanbas/Dashboard`} className="d-flex mb-2">
+                    <img width="80" height="80" src="../images/neu_logo.png" alt="Northeastern University Logo"></img>
+                </Link>
 
-            <ul className="nav nav-pills flex-column">
-                {links.map((link, index) => (
-                    <li key={index} className={`nav-item ${pathname.includes(link.label) ? "active" : ""}`}>
-                        <Link to={`/Kanbas/${link.label}`} className="nav-link d-flex flex-column align-items-center">
-                            {link.icon} {link.label}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+                <ul className="nav nav-pills flex-column">
+                    {links.map((link, index) => (
+                        <li key={index} className={`nav-item ${pathname.includes(link.label) ? "active" : ""}`}>
+                            <Link to={`/Kanbas/${link.label}`} className="nav-link d-flex flex-column align-items-center">
+                                {link.icon} {link.label}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
-
     );
 }
 

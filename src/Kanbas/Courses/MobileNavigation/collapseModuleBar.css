@@ -1,0 +1,43 @@
+ #collapseModuleBar .list-group-item {
+     padding: 0;
+     color: red;
+ }
+
+ #collapseModuleBar .list-group-item.active {
+     background-color: transparent;
+ }
+
+ #collapseModuleBar .list-group-item.active a {
+     font-weight: bold;
+ }
+
+
+ #collapseModuleBar .list-group-item:hover {
+     text-decoration: underline;
+     background-color: transparent;
+     color: red;
+ }
+
+ #collapseModuleBar .list-group-item a {
+     text-decoration: none;
+     color: red;
+     font-weight: 200;
+ }
+
+ #collapseModuleBar .list-group-item i {
+     color: red;
+ }
+
+ .red-icon {
+     color: red;
+ }
+
+ .collapse .card {
+     border-top-left-radius: 0;
+     border-top-right-radius: 0;
+     transition: border-radius 0.1s ease;
+ }
+
+ .card-body {
+     padding: 6px;
+ }

@@ -9,7 +9,7 @@ function CourseNavigation() {
     const { pathname } = useLocation();
 
     return (
-        <div id="course-nav-sidebar">
+        <div id="course-nav-sidebar" className="d-none d-lg-block">
 
             <span id="section-tabs-header-subtitle" className="ellipsis">
                 202430_2 Spring 2024 Semester Full Term Grad

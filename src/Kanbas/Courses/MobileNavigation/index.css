@@ -1,0 +1,24 @@
+.navbar.bg-company-red {
+    background-color: black;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+.icon-white,
+.icon-white a {
+    color: white;
+}
+
+.toggle-icons a[aria-expanded=true] .fa-angle-down {
+    display: none;
+}
+
+.toggle-icons a[aria-expanded=false] .fa-x {
+    display: none;
+}

@@ -2,14 +2,20 @@ import { courses } from '../Database';
 import { Link } from "react-router-dom";
 import { FaEllipsisVertical, FaFilePen } from "react-icons/fa6";
 import './index.css';
+import MobileNavigation from '../Courses/MobileNavigation';
 
 function Dashboard() {
     return (
         <>
-            <div className="container-fluid main">
-                <h1>Dashboard</h1>
-                <hr />
-                <h2>Published Courses (3)</h2>
+            <div className="main">
+                <div className="d-block d-md-none mb-3 mobile-navbar">
+                    <MobileNavigation />
+                </div>
+                <div className="d-none d-md-block">
+                    <h1>Dashboard</h1>
+                    <hr />
+                    <h2>Published Courses (3)</h2>
+                </div>
                 <hr />
                 <div className="d-flex flex-row flex-wrap row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 card-container">
                     {courses.map((course) => (
@@ -39,6 +45,7 @@ function Dashboard() {
                         </div>
                     ))}
                 </div>
+
             </div>
         </>
     )

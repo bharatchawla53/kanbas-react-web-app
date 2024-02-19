@@ -10,6 +10,7 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
+import MobileNavigation from "./MobileNavigation";
 
 function Courses() {
 
@@ -38,45 +39,51 @@ function Courses() {
     // TODO make breadcrumb responsive refer to the old code
     return (
         <div className="course-main">
-            <div className="d-flex align-items-center">
-                <HiMiniBars3 size={'2em'} />
-                <nav className="custom-breadcrumb" aria-label="breadcrumb">
-                    <ol className="breadcrumb m-0 ms-3">
-                        {isAssignmentPath && idMatch ? (
-                            <>
+            <div className="d-none d-md-block">
+                <div className="d-flex align-items-center">
+                    <HiMiniBars3 size={'2em'} />
+                    <nav className="custom-breadcrumb" aria-label="breadcrumb">
+                        <ol className="breadcrumb m-0 ms-3">
+                            {isAssignmentPath && idMatch ? (
+                                <>
+                                    <li className="breadcrumb-item">
+                                        <Link to={`/Kanbas/Courses/${course?._id}/Home`}>
+                                            {course?.number}{course?.startDate}
+                                        </Link>
+                                    </li>
+
+                                    <li className="breadcrumb-item">
+                                        <Link to={`/Kanbas/Courses/${course?._id}/Assignments`}>
+                                            Assignments
+                                        </Link>
+                                    </li>
+                                </>
+                            ) : (
                                 <li className="breadcrumb-item">
                                     <Link to={`/Kanbas/Courses/${course?._id}/Home`}>
                                         {course?.number}{course?.startDate}
                                     </Link>
                                 </li>
+                            )}
 
-                                <li className="breadcrumb-item">
-                                    <Link to={`/Kanbas/Courses/${course?._id}/Assignments`}>
-                                        Assignments
-                                    </Link>
-                                </li>
-                            </>
-                        ) : (
-                            <li className="breadcrumb-item">
-                                <Link to={`/Kanbas/Courses/${course?._id}/Home`}>
-                                    {course?.number}{course?.startDate}
-                                </Link>
+                            <li className="breadcrumb-item active" aria-current="page">
+                                {assignmentId ? assignmentId : activeBreadcrumb}
                             </li>
-                        )}
-
-                        <li className="breadcrumb-item active" aria-current="page">
-                            {assignmentId ? assignmentId : activeBreadcrumb}
-                        </li>
-                    </ol>
-                </nav>
-                <div className="ms-auto float-end">
-                    <a href="" className="btn btn-outline-secondary ellipsis">
-                        <FaGlasses className="fa-glasses" />
-                        Student View
-                    </a>
+                        </ol>
+                    </nav>
+                    <div className="ms-auto float-end">
+                        <a href="" className="btn btn-outline-secondary ellipsis">
+                            <FaGlasses className="fa-glasses" />
+                            Student View
+                        </a>
+                    </div>
                 </div>
+                <hr />
             </div>
-            <hr />
+
+            <div className="d-block d-md-none mb-3 mobile-navbar">
+                <MobileNavigation />
+            </div>
 
             <div className="d-flex flex-row">
                 <CourseNavigation />
