@@ -88,5 +88,15 @@
         "email": "legolas@mirkwood.com",
         "dob": "2879-07-15",
         "role": "FACULTY"
+    },
+    {
+        "_id": "130",
+        "username": "spiderman",
+        "password": "legolas123",
+        "firstName": "Peter",
+        "lastName": "Parker",
+        "email": "peter@mirkwood.com",
+        "dob": "2879-08-15",
+        "role": "FACULTY"
     }
 ]

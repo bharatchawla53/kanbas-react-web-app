@@ -2,7 +2,6 @@ import { FaBan, FaCheckCircle, FaFileImport, FaBullseye, FaBell, FaBullhorn, FaC
 import { FaChartSimple, FaXmark } from "react-icons/fa6";
 import "./status.css";
 
-
 function Status() {
     return (
         <div className="col-3 d-none d-xxl-block course-status-wrapper">
@@ -147,9 +146,7 @@ function Status() {
                         <a href="#" className="to-do-item"> 12 more in the next week....</a>
                     </div>
                 </div>
-
             </div>
-
         </div>
     );
 }

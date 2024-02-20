@@ -90,11 +90,9 @@ function Assignments() {
                             </div>
                         </div>
                     ))}
-
                 </div>
             </div>
         </div>
-
     );
 }
 
