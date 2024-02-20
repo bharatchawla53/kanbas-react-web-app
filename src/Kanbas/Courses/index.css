@@ -4,25 +4,3 @@
         padding: 20px 15px;
     }
 }
-
-.custom-breadcrumb {
-    --bs-breadcrumb-divider: '>';
-}
-
-.breadcrumb-item a {
-    color: red;
-    font-size: large;
-}
-
-.breadcrumb-item a:hover {
-    text-decoration: none;
-}
-
-.course-routes {
-    width: 100%;
-}
-
-.fa-glasses {
-    margin-right: 3px;
-    font-size: 18px;
-}
