@@ -3,6 +3,7 @@ import AccountNavigation from "./Navigation/accountNavigation";
 import Profile from "./Profile";
 import { FaBars } from "react-icons/fa";
 import "./index.css";
+import EditProfile from "./Profile/Edit";
 
 function Account() {
     return (
@@ -22,6 +23,7 @@ function Account() {
                         <Route path="/" element={<Navigate to="Profile" />} />
                         <Route path="Notifications" element={<h2>Notifications</h2>} />
                         <Route path="Profile" element={<Profile />} />
+                        <Route path="Profile/Edit" element={<EditProfile />} />
                         <Route path="Files" element={<h2>Files</h2>} />
                         <Route path="Settings" element={<h2>Settings</h2>} />
                         <Route path="ePortfolios" element={<h2>ePortfolios</h2>} />

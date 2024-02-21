@@ -44,8 +44,13 @@ h2 {
 .profile-layout-secondary {
     flex: 1;
     text-align: right;
+    margin-left: auto;
 }
 
 .layout-content {
     padding: 36px 48px 48px 48px;
+}
+
+.layout-contentWrapper {
+    flex: 1;
 }
