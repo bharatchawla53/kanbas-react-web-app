@@ -1,53 +1,16 @@
-import { courses as dbCourses } from '../Database';
 import { Link } from "react-router-dom";
 import { FaEllipsisVertical, FaFilePen } from "react-icons/fa6";
 import MobileNavigation from '../Courses/MobileNavigation';
-import React, { useState } from "react";
 import { MdDelete, MdEdit } from "react-icons/md";
 import './index.css';
+import { Course } from "..";
 
-function Dashboard() {
-
-    interface Course {
-        _id: string;
-        name: string;
-        number: string;
-        courseText: string;
-        startDate: string;
-        endDate: string;
-        image: string;
+function Dashboard({ courses, course, setCourse, addNewCourse,
+    deleteCourse, updateCourse }: {
+        courses: Course[], course: Course, setCourse: (course: Course) => void,
+        addNewCourse: () => void, deleteCourse: (courseId: string) => void, updateCourse: () => void
     }
-
-    const [courses, setCourses] = useState<Course[]>(dbCourses);
-
-    const [course, setCourse] = useState({
-        _id: "0",
-        name: "New Course",
-        number: "New Number",
-        courseText: "New Course",
-        startDate: "2023-09-10",
-        endDate: "2023-12-15",
-        image: "/images/reactjs.jpg"
-    });
-
-    const addNewCourse = () => {
-        const newCourse = { ...course, _id: new Date().getTime().toString() };
-        setCourses([...courses, { ...course, ...newCourse }]);
-    };
-
-    const deleteCourse = (courseId: string) => {
-        setCourses(courses.filter((course) => course._id != courseId));
-    }
-
-    const updateCourse = () => {
-        setCourses(courses.map((c) => {
-            if (c._id === course._id) {
-                return course;
-            } else {
-                return c;
-            }
-        }))
-    }
+) {
 
     return (
         <>

@@ -4,8 +4,9 @@ import { Link, useLocation } from "react-router-dom";
 import { useParams } from "react-router";
 import { courses } from "../../Database";
 import "./breadcrumbNav.css"
+import { Course } from "../..";
 
-function BreadcrumbNav() {
+function BreadcrumbNav({ courses }: { courses: Course[] }) {
 
     const { courseId } = useParams();
     const course = courses.find((course) => course._id === courseId);
