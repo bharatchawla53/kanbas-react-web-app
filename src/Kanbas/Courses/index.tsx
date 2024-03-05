@@ -8,7 +8,7 @@ import Grades from "./Grades";
 import MobileNavigation from "./MobileNavigation";
 import BreadcrumbNav from "./BreadcrumbNav/breadcrumbNav";
 import "./index.css"
-import { Course } from "..";
+import { Course } from "../Interfaces/course";
 
 function Courses({ courses }: { courses: Course[] }) {
     return (

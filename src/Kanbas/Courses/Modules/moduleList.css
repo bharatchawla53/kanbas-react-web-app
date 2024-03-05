@@ -10,3 +10,13 @@
 .list-group-item:hover {
     background-color: #F2F2F2;
 }
+
+.module-dropdown {
+    border: none;
+    background-color: transparent;
+}
+
+.module-dropdown-menu {
+    position: absolute;
+    left: -125px
+}

@@ -2,9 +2,8 @@ import { HiMiniBars3 } from "react-icons/hi2";
 import { FaGlasses } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { useParams } from "react-router";
-import { courses } from "../../Database";
 import "./breadcrumbNav.css"
-import { Course } from "../..";
+import { Course } from "../../Interfaces/course";
 
 function BreadcrumbNav({ courses }: { courses: Course[] }) {
 

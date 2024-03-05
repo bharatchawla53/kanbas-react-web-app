@@ -3,7 +3,7 @@ import { FaEllipsisVertical, FaFilePen } from "react-icons/fa6";
 import MobileNavigation from '../Courses/MobileNavigation';
 import { MdDelete, MdEdit } from "react-icons/md";
 import './index.css';
-import { Course } from "..";
+import { Course } from "../Interfaces/course";
 
 function Dashboard({ courses, course, setCourse, addNewCourse,
     deleteCourse, updateCourse }: {
