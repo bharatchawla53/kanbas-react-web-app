@@ -5,24 +5,10 @@ import { useParams } from "react-router-dom";
 import { assignments, enrollments, grades, users } from "../../Database";
 import { useState } from "react";
 import "./index.css"
+import { Assignment } from "../../Interfaces/assignment";
+import { Enrollment } from "../../Interfaces/enrollment";
 
 function Grades() {
-
-    // declaring interface to enforce structure for json
-    interface Assignment {
-        _id: String;
-        title: String;
-        course: String;
-        dueDate: String;
-        dueTime: String;
-        points: Number
-    }
-
-    interface Enrollment {
-        _id: String;
-        user: String;
-        course: String;
-    }
 
     const { courseId } = useParams();
     const assignment: Assignment[] = assignments.filter((assignment) => assignment.course === courseId);

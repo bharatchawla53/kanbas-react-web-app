@@ -4,18 +4,9 @@ import { FaCheckCircle, FaEllipsisV, FaPlus, FaSortDown } from "react-icons/fa";
 import { FaPenToSquare } from "react-icons/fa6";
 import "./index.css";
 import "./../../style.css";
+import { Assignment } from "../../Interfaces/assignment";
 
 function Assignments() {
-
-    // declaring interface to enforce structure for json
-    interface Assignment {
-        _id: String;
-        title: String;
-        course: String;
-        dueDate: String;
-        dueTime: String;
-        points: Number
-    }
 
     const { courseId } = useParams();
     const assignmentList: Assignment[] = assignments.filter((assignment) => assignment.course === courseId);
