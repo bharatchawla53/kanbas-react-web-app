@@ -1,15 +1,53 @@
-import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
-import { FaCheckCircle, FaEllipsisV, FaPlus, FaSortDown } from "react-icons/fa";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { FaCheckCircle, FaEdit, FaEllipsisV, FaPlus, FaSortDown } from "react-icons/fa";
 import { FaPenToSquare } from "react-icons/fa6";
 import "./index.css";
 import "./../../style.css";
+import { KanbasState } from "../../Store";
+import { useSelector, useDispatch } from "react-redux";
+import { selectAssignment } from "./assignmentsReducer";
+import { useState } from "react";
+import { MdDelete } from "react-icons/md";
 import { Assignment } from "../../Interfaces/assignment";
+import DeleteAssignment from "./deleteAssignment";
 
 function Assignments() {
 
+    const assignmentDropDownOptions = [
+        { item: "Edit", icon: <FaEdit className="me-1" /> },
+        { item: "Delete", icon: <MdDelete className="me-1" /> }
+    ]
+
     const { courseId } = useParams();
-    const assignmentList: Assignment[] = assignments.filter((assignment) => assignment.course === courseId);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const assignmentList = useSelector((state: KanbasState) => state.assignmentReducer.assignments)
+        .filter((assignment) => assignment.course === courseId);
+    const [showDropdowns, setShowDropdowns] = useState(Array(assignmentList.length).fill(false));
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+
+    const toggleDropdown = (index: number) => {
+        setShowDropdowns(prevState =>
+            prevState.map((value, idx) => idx === index ? !value : value)
+        );
+    }
+
+    const handleDropdownSelectedOption = (selectedItem: string, assignment: Assignment) => {
+        console.log(selectedItem);
+        setShowDropdowns(Array(assignmentList.length).fill(false));
+
+        switch (selectedItem) {
+            case 'Edit':
+                dispatch(selectAssignment(assignment));
+                navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`);
+                break;
+            case 'Delete':
+                dispatch(selectAssignment(assignment));
+                setShowDeleteModal(true);
+                break;
+        }
+    }
 
     return (
         <div className="container-fluid d-flex flex-row me-5">
@@ -24,10 +62,10 @@ function Assignments() {
                             <FaPlus className="me-1 custom-icon" />
                             Group
                         </button>
-                        <button className="btn btn-danger me-1 custom-btn" type="button">
+                        <Link to={`/Kanbas/Courses/${courseId}/Assignments/new`} className="btn btn-danger me-1 custom-btn">
                             <FaPlus className="me-1 custom-icon" />
                             Assignment
-                        </button>
+                        </Link>
                         <button className="btn btn-outline-secondary me-1 custom-btn" type="button">
                             <FaEllipsisV className="custom-icon" />
                         </button>
@@ -54,7 +92,7 @@ function Assignments() {
                     </div>
 
                     {assignmentList.map((assignment, index) => (
-                        <div className="d-flex list-group-item align-items-center selected">
+                        <div key={index} className="d-flex list-group-item align-items-center selected">
                             <div className="d-flex align-items-center">
                                 <FaEllipsisV />
                                 <FaEllipsisV className="no-spacing-ellipsis" />
@@ -63,7 +101,9 @@ function Assignments() {
                                 <FaPenToSquare className="green-icon" />
                             </div>
                             <div className="d-flex flex-column ms-3 me-auto">
-                                <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>
+                                <Link
+                                    to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                                    onClick={() => dispatch(selectAssignment(assignment))}>
                                     {assignment.title}
                                 </Link>
                                 <div className="multiple-modules">
@@ -77,13 +117,42 @@ function Assignments() {
                             </div>
                             <div className="d-flex align-items-center float-end">
                                 <FaCheckCircle className="me-2 green-icon" />
-                                <FaEllipsisV />
+
+                                <div className="dropdown" onClick={() => toggleDropdown(index)}>
+                                    <button className="module-dropdown"
+                                        aria-expanded={showDropdowns[index]}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            toggleDropdown(index)
+                                        }
+                                        }
+                                    >
+                                        <FaEllipsisV />
+                                    </button>
+                                    <div className={`dropdown-menu dropdown-menu-start module-dropdown-menu${showDropdowns[index] ? ' show' : ''}`}>
+                                        {assignmentDropDownOptions.map((option, index) => (
+                                            <button
+                                                key={index}
+                                                className="dropdown-item"
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    handleDropdownSelectedOption(option.item, assignment);
+                                                }}>
+                                                {option.icon}
+                                                {option.item}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     ))}
+
+                    {showDeleteModal && <DeleteAssignment show={showDeleteModal} setShow={setShowDeleteModal} />}
+
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

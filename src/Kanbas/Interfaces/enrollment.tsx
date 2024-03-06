@@ -1,5 +1,5 @@
 export interface Enrollment {
-    _id: String;
-    user: String;
-    course: String;
+    _id: string;
+    user: string;
+    course: string;
 }

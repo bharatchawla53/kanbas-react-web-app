@@ -10,7 +10,6 @@ function AddModule({ courseId, show, setShow }: {
     setShow: (show: boolean) => void;
 }) {
 
-    const moduleList = useSelector((state: KanbasState) => state.modulesReducer.modules);
     const module = useSelector((state: KanbasState) => state.modulesReducer.module);
     const dispatch = useDispatch();
 

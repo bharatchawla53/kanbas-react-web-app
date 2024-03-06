@@ -5,7 +5,10 @@
         "course": "RS101",
         "dueDate": "Sep 18, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A102",
@@ -13,7 +16,10 @@
         "course": "RS101",
         "dueDate": "Oct 2, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A103",
@@ -21,7 +27,10 @@
         "course": "RS101",
         "dueDate": "Oct 12, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A104",
@@ -29,7 +38,10 @@
         "course": "RS101",
         "dueDate": "Oct 18, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A105",
@@ -37,7 +49,10 @@
         "course": "RS101",
         "dueDate": "Oct 30, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A106",
@@ -45,7 +60,10 @@
         "course": "RS101",
         "dueDate": "Nov 10, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A107",
@@ -53,7 +71,10 @@
         "course": "RS101",
         "dueDate": "Nov 19, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A108",
@@ -61,7 +82,10 @@
         "course": "RS101",
         "dueDate": "Nov 28, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A109",
@@ -69,7 +93,10 @@
         "course": "RS101",
         "dueDate": "Dec 1, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A201",
@@ -77,7 +104,10 @@
         "course": "RS102",
         "dueDate": "Oct 18, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A202",
@@ -85,7 +115,10 @@
         "course": "RS102",
         "dueDate": "Oct 30, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A203",
@@ -93,7 +126,10 @@
         "course": "RS102",
         "dueDate": "Nov 10, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A301",
@@ -101,7 +137,10 @@
         "course": "RS103",
         "dueDate": "Nov 19, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A302",
@@ -109,7 +148,10 @@
         "course": "RS103",
         "dueDate": "Nov 28, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     },
     {
         "_id": "A303",
@@ -117,6 +159,9 @@
         "course": "RS103",
         "dueDate": "Dec 1, 2024",
         "dueTime": "11:59pm",
-        "points": 100
+        "points": 100,
+        "description": "",
+        "availableFrom": "",
+        "availableUntil": ""
     }
 ]
