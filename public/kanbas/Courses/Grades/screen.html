@@ -1,46 +1,125 @@
 <html>
 <head>
     <title>Grades Screen</title>
+    <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet" />
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Grades/index.css" />
 </head>
 <body>
-    <table>
-        <tbody>
-            <tr>
-                <td valign="top">
-                    <ul>
-                        <li>
-                            <a href="/Kanbas/Account/Profile/screen.html">
-                                Account
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
-                        </li>
-                        <li>
-                            <a href="/Kanbas/Calendar/index.html">Calendar</a>
-                        </li>
-                        <li>
-                            <a href="/Kanbas/Inbox/index.html">Inbox</a>
-                        </li>
-                        <li>
-                            <a href="/kanbas/History/index.html">History</a>
-                        </li>
-                        <li>
-                            <a href="kanbas/Studio/index.html">Studio</a>
-                        </li>
-                        <li>
-                            <a href="kanbas/Commons/index.html">Commons</a>
-                        </li>
-                        <li>
-                            <a href="kanbas/Help/index.html">Help</a>
-                        </li>
-                    </ul>
-                </td>
+    <div class="d-flex flex-row container-fluid p-0">
+        <div class="d-none d-md-block">
+            <div class="d-flex flex-column flex-shrink-1 align-items-center text-white custom-container" id="nav-sidebar">
+                <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white">
+                    <img width="80" height="80" src="../../../images/neu_logo.png" alt="Northeastern University Logo">
+                </a>
 
-                <td valign="top">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="/Kanbas/Account/Profile/screen.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i id="account-icon" class="fa-solid fa-circle-user fa-2x"></i>
+                                Account
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kanbas/Dashboard/screen.html" class="nav-link active">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-gauge-high fa-2x"></i>
+                                Dashboard
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Kanbas/Courses/Home/screen.html" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-book fa-2x"></i>
+                                Courses
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa fa-calendar fa-2x"></i>
+                                Calendar
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-inbox fa-2x"></i>
+                                Inbox
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-clock fa-2x"></i>
+                                History
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-desktop fa-2x"></i>
+                                Studio
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+                                Commons
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="d-flex flex-column align-items-center">
+                                <i class="fa-solid fa-circle-question fa-2x"></i>
+                                Help
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="d-flex flex-row align-items-center container-fluid pt-3 ms-2">
+                <i class="fa-solid fa-bars fa-xl me-3"></i>
+
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="../courses/index.html">CS4550.12631.202410</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Grades</li>
+                    </ol>
+                </nav>
+                <div class="ms-auto float-end">
+                    <a href="" class="btn btn-outline-secondary ellipsis">
+                        <i class="fa-solid fa-glasses me-1"></i>
+                        Student View
+                    </a>
+                </div>
+            </div>
+            <hr />
+
+            <div class="d-flex flex-row">
+                <div class="d-flex flex-column d-none d-lg-block" id="course-nav-sidebar">
+
+                    <span class="mb-2 ellipsis">
+                        202430_2 Spring 2024 Semester Full Term Grad
+                    </span>
+
                     <ul>
                         <li>
                             <a href="/Kanbas/Courses/Home/screen.html">Home</a>
@@ -60,7 +139,7 @@
                         <li>
                             <a href="/Kanbas/Courses/Quizzes/screen.html">Quizzes</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
                         </li>
                         <li>
@@ -94,179 +173,252 @@
                             <a href="/Kanbas/Courses/Syllabus/screen.html">Syllabus</a>
                         </li>
                         <li>
-                            <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">Settings</a>
+                            <a href="/Kanbas/Courses/Settings/screen.html">Settings</a>
                         </li>
                     </ul>
-                </td>
+                </div>
 
-                <td>
-                    <select>
-                        <option>Grades</option>
-                        <option selected>Gradebook</option>
-                    </select>
+                <div class="container-fluid d-flex flex-column mx-4 mt-1">
+                    <div class="d-flex flex-row align-items-center ms-auto mb-3">
+                        <button class="btn btn-outline-secondary me-1" type="button">
+                            <i class="fa-solid fa-file-import"></i>
+                            Import
+                        </button>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle me-1" data-bs-toggle="dropdown" type="button">
+                                <i class="fa-solid fa-file-export"></i>
+                                Export
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Export Current Gradebook View</a></li>
+                                <li><a class="dropdown-item" href="#">Export Entire Gradebook</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-outline-secondary btn-lg me-4" type="button">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                    </div>
 
-                    <button type="button">Import</button>
-
-                    <select>
-                        <option>Export as PDF</option>
-                        <option selected>Export</option>
-                    </select>
-
-                    <button type="button">Configure</button>
-
-                    <h3>Student Names</h3>
                     <form>
-                        <input placeholder="Search Students" />
+                        <div class="d-flex mb-3">
+                            <div class="col me-3">
+                                <h6>Student Names</h6>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                    <input type="text" class="form-select border-start-0" placeholder="Search Students">
+                                </div>
+                            </div>
+                            <div class="col me-4">
+                                <h6>Assignment Names</h6>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                    <input type="text" class="form-select border-start-0" placeholder="Search Assignments">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-secondary mb-3">
+                            <i class="fa-solid fa-filter"></i>
+                            Apply Filters
+                        </button>
                     </form>
 
-                    <h3>Assignment Names</h3>
-                    <form>
-                        <input placeholder="Search Assignments" />
-                    </form>
+                    <div class="table-responsive me-4">
+                        <table class="table table-bordered table-striped table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th width="15%" class="text-center align-middle">Student Name</th>
+                                    <th class="text-center align-middle">A1 - SETUP Out of 100</th>
+                                    <th class="text-center align-middle">A2 - HTML Out of 100</th>
+                                    <th class="text-center align-middle">A3 - CSS Out of 100</th>
+                                    <th class="text-center align-middle">A4 - BOOTSTRAP Out of 100</th>
+                                    <th class="text-center align-middle">A5 - JAVASCRIPT Out of 100</th>
+                                    <th class="text-center align-middle">A6 - REACT Out of 100</th>
+                                    <th class="text-center align-middle">A7 - REDUX Out of 100</th>
+                                    <th class="text-center align-middle">A8 - NODE Out of 100</th>
+                                    <th class="text-center align-middle">A9 - MONGO Out of 100</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="name-link">
+                                            Alice Wonderland
+                                        </a>
+                                    </td>
+                                    <td align="center">98%</td>
+                                    <td align="center">89%</td>
+                                    <td align="center">87%</td>
+                                    <td>
+                                        <div class="position-relative">
+                                            <input type="text" class="form-control form-control-sm me-1 text-center" value="90%" />
+                                            <button class="btn btn-outline-light p-1 position-absolute arrow-bracket-button" type="button">
+                                                <i class="fa-solid fa-arrow-right-from-bracket fa-xs"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td align="center">89%</td>
+                                    <td align="center">94%</td>
+                                    <td align="center">88%</td>
+                                    <td align="center">87%</td>
+                                    <td align="center">100%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="name-link">
+                                            Princes Leia
+                                        </a>
+                                    </td>
+                                    <td align="center">98%</td>
+                                    <td align="center">80%</td>
+                                    <td align="center">87%</td>
+                                    <td align="center">86%</td>
+                                    <td align="center">100%</td>
+                                    <td align="center">94%</td>
+                                    <td align="center">85%</td>
+                                    <td align="center">84%</td>
+                                    <td align="center">70%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="name-link">
+                                            Luke Skywalker
+                                        </a>
+                                    </td>
+                                    <td align="center">99%</td>
+                                    <td align="center">88%</td>
+                                    <td align="center">97%</td>
+                                    <td align="center">82%</td>
+                                    <td align="center">96%</td>
+                                    <td align="center">93%</td>
+                                    <td align="center">95%</td>
+                                    <td align="center">100%</td>
+                                    <td align="center">93%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="name-link">
+                                            Han Solo
+                                        </a>
+                                    </td>
+                                    <td align="center">99%</td>
+                                    <td align="center">88%</td>
+                                    <td align="center">97%</td>
+                                    <td align="center">82%</td>
+                                    <td align="center">99%</td>
+                                    <td align="center">93%</td>
+                                    <td align="center">95%</td>
+                                    <td align="center">100%</td>
+                                    <td align="center">93%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="name-link">
+                                            Lando Calresian
+                                        </a>
+                                    </td>
+                                    <td align="center">99%</td>
+                                    <td align="center">88%</td>
+                                    <td align="center">97%</td>
+                                    <td align="center">82%</td>
+                                    <td align="center">96%</td>
+                                    <td align="center">93%</td>
+                                    <td align="center">80%</td>
+                                    <td align="center">100%</td>
+                                    <td align="center">93%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="name-link">
+                                            Boba Fet
+                                        </a>
+                                    </td>
+                                    <td align="center">99%</td>
+                                    <td align="center">88%</td>
+                                    <td align="center">97%</td>
+                                    <td align="center">82%</td>
+                                    <td align="center">96%</td>
+                                    <td align="center">93%</td>
+                                    <td align="center">95%</td>
+                                    <td align="center">100%</td>
+                                    <td align="center">93%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="name-link">
+                                            Darth Vader
+                                        </a>
+                                    </td>
+                                    <td align="center">99%</td>
+                                    <td align="center">88%</td>
+                                    <td align="center">97%</td>
+                                    <td align="center">82%</td>
+                                    <td align="center">96%</td>
+                                    <td align="center">93%</td>
+                                    <td align="center">95%</td>
+                                    <td align="center">85%</td>
+                                    <td align="center">93%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="name-link">
+                                            Obi-Wan Kenobi
+                                        </a>
+                                    </td>
+                                    <td align="center">99%</td>
+                                    <td align="center">88%</td>
+                                    <td align="center">97%</td>
+                                    <td align="center">82%</td>
+                                    <td align="center">91%</td>
+                                    <td align="center">93%</td>
+                                    <td align="center">95%</td>
+                                    <td align="center">100%</td>
+                                    <td align="center">93%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="name-link">
+                                            R2-D2
+                                        </a>
+                                    </td>
+                                    <td align="center">99%</td>
+                                    <td align="center">88%</td>
+                                    <td align="center">97%</td>
+                                    <td align="center">82%</td>
+                                    <td align="center">96%</td>
+                                    <td align="center">93%</td>
+                                    <td align="center">95%</td>
+                                    <td align="center">100%</td>
+                                    <td align="center">95%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="name-link">
+                                            C-3PO
+                                        </a>
+                                    </td>
+                                    <td align="center">99%</td>
+                                    <td align="center">88%</td>
+                                    <td align="center">97%</td>
+                                    <td align="center">82%</td>
+                                    <td align="center">96%</td>
+                                    <td align="center">96%</td>
+                                    <td align="center">95%</td>
+                                    <td align="center">100%</td>
+                                    <td align="center">93%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-                    <button type="button">Apply Filters</button><br /><br />
+            </div>
+        </div>
+    </div>
 
-                    <table border="1" width="80%">
-                        <thead>
-                            <tr>
-                                <th width="15%">Student Name</th>
-                                <th>A1 - SETUP Out of 100</th>
-                                <th>A2 - HTML Out of 100</th>
-                                <th>A3 - CSS Out of 100</th>
-                                <th>A4 - BOOTSTRAP Out of 100</th>
-                                <th>A5 - JAVASCRIPT Out of 100</th>
-                                <th>A6 - REACT Out of 100</th>
-                                <th>A7 - REDUX Out of 100</th>
-                                <th>A8 - NODE Out of 100</th>
-                                <th>A9 - MONGO Out of 100</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Alice Wonderland</td>
-                                <td align="center">98</td>
-                                <td align="center">89</td>
-                                <td align="center">87</td>
-                                <td align="center"><input type="text" value="90" size="1" text-align="center" /></td>
-                                <td align="center">89</td>
-                                <td align="center">94</td>
-                                <td align="center">88</td>
-                                <td align="center">87</td>
-                                <td align="center">100</td>
-                            </tr>
-                            <tr>
-                                <td>Princes Leia</td>
-                                <td align="center">98</td>
-                                <td align="center">80</td>
-                                <td align="center">87</td>
-                                <td align="center">86</td>
-                                <td align="center">100</td>
-                                <td align="center">94</td>
-                                <td align="center">85</td>
-                                <td align="center">84</td>
-                                <td align="center"><input type="text" value="70" size="1" text-align="center" /></td>
-                            </tr>
-                            <tr>
-                                <td>Luke Skywalker</td>
-                                <td align="center">99</td>
-                                <td align="center">88</td>
-                                <td align="center">97</td>
-                                <td align="center"><input type="text" value="82" size="1" text-align="center" /></td>
-                                <td align="center">96</td>
-                                <td align="center">93</td>
-                                <td align="center">95</td>
-                                <td align="center">100</td>
-                                <td align="center">93</td>
-                            </tr>
-                            <tr>
-                                <td>Han Solo</td>
-                                <td align="center">99</td>
-                                <td align="center">88</td>
-                                <td align="center">97</td>
-                                <td align="center">82</td>
-                                <td align="center"><input type="text" value="99" size="1" text-align="center" /></td>
-                                <td align="center">93</td>
-                                <td align="center">95</td>
-                                <td align="center">100</td>
-                                <td align="center">93</td>
-                            </tr>
-                            <tr>
-                                <td>Lando Calresian</td>
-                                <td align="center">99</td>
-                                <td align="center">88</td>
-                                <td align="center">97</td>
-                                <td align="center">82</td>
-                                <td align="center">96</td>
-                                <td align="center">93</td>
-                                <td align="center"><input type="text" value="80" size="1" text-align="center" /></td>
-                                <td align="center">100</td>
-                                <td align="center">93</td>
-                            </tr>
-                            <tr>
-                                <td>Boba Fet</td>
-                                <td align="center">99</td>
-                                <td align="center"><input type="text" value="88" size="1" text-align="center" /></td>
-                                <td align="center">97</td>
-                                <td align="center">82</td>
-                                <td align="center">96</td>
-                                <td align="center">93</td>
-                                <td align="center">95</td>
-                                <td align="center">100</td>
-                                <td align="center">93</td>
-                            </tr>
-                            <tr>
-                                <td>Darth Vader</td>
-                                <td align="center">99</td>
-                                <td align="center">88</td>
-                                <td align="center">97</td>
-                                <td align="center">82</td>
-                                <td align="center">96</td>
-                                <td align="center">93</td>
-                                <td align="center">95</td>
-                                <td align="center"><input type="text" value="85" size="1" text-align="center" /></td>
-                                <td align="center">93</td>
-                            </tr>
-                            <tr>
-                                <td>Obi-Wan Kenobi</td>
-                                <td align="center">99</td>
-                                <td align="center">88</td>
-                                <td align="center">97</td>
-                                <td align="center">82</td>
-                                <td align="center"><input type="text" value="91" size="1" text-align="center" /></td>
-                                <td align="center">93</td>
-                                <td align="center">95</td>
-                                <td align="center">100</td>
-                                <td align="center">93</td>
-                            </tr>
-                            <tr>
-                                <td>R2-D2</td>
-                                <td align="center">99</td>
-                                <td align="center">88</td>
-                                <td align="center">97</td>
-                                <td align="center">82</td>
-                                <td align="center">96</td>
-                                <td align="center">93</td>
-                                <td align="center">95</td>
-                                <td align="center">100</td>
-                                <td align="center"><input type="text" value="95" size="1" text-align="center" /></td>
-                            </tr>
-                            <tr>
-                                <td>C-3PO</td>
-                                <td align="center">99</td>
-                                <td align="center">88</td>
-                                <td align="center">97</td>
-                                <td align="center">82</td>
-                                <td align="center">96</td>
-                                <td align="center"><input type="text" value="96" size="1" text-align="center" /></td>
-                                <td align="center">95</td>
-                                <td align="center">100</td>
-                                <td align="center">93</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

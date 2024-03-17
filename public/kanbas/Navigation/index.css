@@ -1,0 +1,38 @@
+#nav-sidebar {
+    min-height: max(100vh, 100%); 
+}
+
+.custom-container {
+    width: 80px; 
+    background-color: black;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0;
+    padding: 1px;
+    color: white;
+}
+
+.nav-pills .nav-link:hover {
+    color: red;
+}
+
+.nav-pills .nav-link.active {
+    background-color: white;
+    color: red;
+}
+
+.nav-pills .nav-link div {
+    margin-bottom: 3px;
+    padding: 3px;
+}
+
+.nav-pills .nav-link div i {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px; 
+}
+
+#account-icon {
+    color: white
+}

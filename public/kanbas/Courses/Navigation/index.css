@@ -1,0 +1,45 @@
+.ellipsis {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+#section-tabs-header-subtitle {
+    font-style: italic;
+    color: grey;
+}
+
+#course-nav-sidebar {
+    max-width: 200px;
+    margin: 25px;
+}
+
+#course-nav-sidebar ul {
+    padding-left: 0; 
+}
+
+#course-nav-sidebar li {
+    background-color: white;
+    list-style: none;
+    padding-block: 10px; 
+}
+
+#course-nav-sidebar li a {
+    color: red; 
+}
+
+#course-nav-sidebar li a:hover {
+    text-decoration: none; 
+   
+}
+
+#course-nav-sidebar li.active {
+    font-weight: bold;
+    border-left: 2px solid #2d3b45;
+    padding-left: 4px;
+    margin-left: -7px;
+}
+
+#course-nav-sidebar li.active a {
+    color: #2d3b45;
+}

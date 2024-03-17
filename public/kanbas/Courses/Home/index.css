@@ -1,0 +1,278 @@
+.btn {
+    color: #2d3b45;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn-outline-secondary:hover {
+    background-color: black;
+}
+
+.dropdown:hover .btn-outline-secondary {
+    background-color: lightgrey;
+    color: #2d3b45;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: red;
+    color: white;
+}
+
+.fa-circle-check {
+    color: green;
+}
+
+.btn-danger {
+    color: white; 
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn-danger:hover {
+    background: #2d3b45;
+    border-color: #c7cdd1;
+}
+
+.fa-sort-down {
+    margin-top: -7px;
+    padding-left: 4px;
+}
+
+.list-group a {
+    color: black; 
+}
+
+.list-group a:hover {
+    text-decoration: none; 
+}
+
+.list-group-item {
+    font-weight: 500;
+}
+
+
+.list-group-item.selected {
+    border-left: 3px solid;
+    border-left-color: green;
+}
+
+.list-group-item:hover {
+    background-color: #F2F2F2;
+}
+
+.btn-success {
+    color: white;
+}
+
+.btn-success .fa-circle-check {
+    color: white; 
+}
+
+.course-options {
+    margin-right: 5em; 
+}
+
+.notification-badger {
+    color: red; 
+}
+
+.notification-badger span {
+    color: white; 
+}
+
+.to-do {
+    margin-left: -20px; 
+}
+
+.to-do-item {
+    color: red; 
+}
+
+.to-do a:hover {
+    text-decoration: none; 
+}
+
+.to-do-item:hover {
+    text-decoration: none;
+}
+
+.to-do-item-detail {
+    font-size: 0.7em; 
+    text-decoration: underline;
+    color: grey;
+}
+
+.xmark {
+    margin-left: -80px; 
+}
+
+.calendar {
+    margin-left: -2.85em; 
+}
+
+.calendar-option {
+    font-size: 0.8em;
+    color: red; 
+}
+
+.coming-up-item {
+    margin-top: -8px; 
+}
+
+.coming-up-item-detail {
+    font-size: 0.8em; 
+    text-decoration: underline; 
+}
+
+.coming-up-item-detail:hover {
+    text-decoration: none;
+}
+
+.coming-up-item-link {
+    margin-top: -20px;
+}
+
+
+.coming-up-item-link a {
+    font-size: small;
+}
+
+.breadcrumb-item a {
+    color: red;
+    font-size: large;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: none; 
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    display: block; 
+}
+
+.course-status-wrapper {
+    margin-left: 40px; 
+}
+
+.navbar.bg-company-red {
+    background-color: black;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    color: white; 
+}
+
+.icon-white, .icon-white a {
+    color: white; 
+}
+
+.collapse .card {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    transition: border-radius 0.1s ease;
+
+}
+
+.card-body {
+    padding: 6px; 
+}
+
+.toggle-icons a[aria-expanded = true] .fa-angle-down {
+    display: none;
+}
+
+.toggle-icons a[aria-expanded = false] .fa-x {
+    display: none;
+}
+
+
+#collapseModuleBar .list-group-item {
+    padding: 0;
+}
+
+#collapseModuleBar .list-group-item.active{
+    background-color: transparent; 
+}
+
+#collapseModuleBar .list-group-item.active a {
+    font-weight: 500;
+}
+
+
+#collapseModuleBar .list-group-item:hover {
+    text-decoration: underline;
+    background-color: transparent; 
+    color: red; 
+}
+
+#collapseModuleBar .list-group-item a {
+    text-decoration: none;
+    color: red;
+    font-weight: 200; 
+}
+
+#collapseModuleBar .list-group-item i {
+    color: red; 
+}
+
+.toggle-sidenav-icon a i{
+    color: white; 
+}
+
+.offcanvas.show {
+    width: 100%; 
+}
+
+.smooth-transform {
+    transition: transform 0.3s ease-in-out;
+}
+
+#canvas-icon {
+    width: 200px;
+    height: 80px; 
+}
+
+.offcanvas-header .btn-close{
+    margin-top: 5px; 
+    margin-right: 35px; 
+}
+
+.offcanvas-body .list-group-item a {
+    text-decoration: none; 
+    color: red; 
+    font-weight: 400; 
+    padding-left: 15px; 
+    vertical-align: top;
+}
+
+.offcanvas-body .list-group-item i {
+    color: red; 
+}
+
+.offcanvas-body .list-group-item a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    color: red;
+}
+
+#account-icon {
+    color: grey; 
+}
+
+#greater-than {
+    color: grey; 
+}
+
+.mobile-navbar {
+    margin-left: -12px; 
+    margin-right: -20px;
+}
