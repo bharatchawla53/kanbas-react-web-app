@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
-    "\\public\\kanbas\\Courses\\Assignments\\Edit"
+    "\\public\\kanbas\\Courses",
+    "\\public\\kanbas\\Courses\\Home",
+    "\\public\\labs\\a2",
+    "\\src"
   ],
-  "SelectedNode": "\\public\\kanbas",
+  "SelectedNode": "\\public",
   "PreviewInSolutionExplorer": false
 }

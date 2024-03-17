@@ -1,0 +1,56 @@
+.user-circle {
+    font-size: 120px;
+    color: grey;
+}
+
+.image-block {
+    flex-direction: row;
+    display: flex;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.profile-avatar {
+    margin-right: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: normal;
+}
+
+.profile-content a {
+    text-decoration: none;
+    color: red;
+}
+
+.profile-content ul {
+    list-style: none;
+}
+
+.profile-layout {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.profile-layout-primary {
+    flex: 3;
+}
+
+.profile-layout-secondary {
+    flex: 1;
+    text-align: right;
+    margin-left: auto;
+}
+
+.layout-content {
+    padding: 36px 48px 48px 48px;
+}
+
+.layout-contentWrapper {
+    flex: 1;
+}

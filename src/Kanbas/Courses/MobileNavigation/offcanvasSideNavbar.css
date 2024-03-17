@@ -1,0 +1,44 @@
+.offcanvas.show {
+    width: 100%;
+}
+
+.smooth-transform {
+    transition: transform 0.3s ease-in-out;
+}
+
+#canvas-icon {
+    width: 200px;
+    height: 80px;
+}
+
+.offcanvas-header .btn-close {
+    margin-top: 5px;
+    margin-right: 35px;
+}
+
+.offcanvas-body .list-group-item a {
+    text-decoration: none;
+    color: red;
+    font-weight: 400;
+    padding-left: 15px;
+    vertical-align: top;
+}
+
+.offcanvas-body .list-group-item i {
+    color: red;
+}
+
+.offcanvas-body .list-group-item a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    color: red;
+}
+
+.account-icon {
+    color: grey;
+}
+
+.fa-greater-than {
+    color: grey;
+    font-size: 15px;
+}

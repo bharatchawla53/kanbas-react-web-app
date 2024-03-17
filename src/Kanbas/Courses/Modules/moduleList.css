@@ -1,0 +1,12 @@
+.list-group-item {
+    font-weight: 600;
+}
+
+.list-group-item.selected {
+    border-left: 3px solid;
+    border-left-color: green;
+}
+
+.list-group-item:hover {
+    background-color: #F2F2F2;
+}

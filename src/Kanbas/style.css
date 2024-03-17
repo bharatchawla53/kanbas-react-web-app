@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* kanbas btn css */
+.btn {
+    color: #2d3b45;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn-outline-secondary:hover {
+    background-color: black;
+}
+
+.btn-danger {
+    color: white;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+}
+
+.btn-danger:hover {
+    background: #2d3b45;
+    border-color: #c7cdd1;
+}
+
+.btn-outline-secondary.ellipsis {
+    margin-left: 5px;
+}
+
+.circle-check {
+    color: green;
+    font-size: 21px;
+}
+
+.no-spacing-ellipsis {
+    margin-left: -10px;
+}
+
+.sort-down {
+    margin-left: -5px;
+    margin-top: -7px;
+}
+
+.green-icon {
+    color: green;
+}

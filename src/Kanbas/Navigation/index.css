@@ -1,0 +1,40 @@
+.left-menu-nav {
+    width: 80px;
+    background-color: black;
+    min-height: max(100vh, 100%);
+    position: fixed;
+}
+
+.nav-pills .nav-item .nav-link {
+    border-radius: 0;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    padding: 3px;
+    font-size: 14px;
+}
+
+.nav-pills .nav-item .nav-link:hover {
+    color: red;
+}
+
+.nav-pills .nav-item.active .nav-link {
+    background-color: white;
+    color: red;
+}
+
+.sidenav-icon {
+    color: red;
+}
+
+/* 
+@media screen and (max-width: 992px) {
+
+     Adjust the max-width as needed 
+    .left-menu-nav {
+        width: 0;
+        Collapse the container 
+        overflow: hidden;
+         Hide the content 
+    }
+} */

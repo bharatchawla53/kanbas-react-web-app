@@ -1,0 +1,56 @@
+.grades-btn {
+    font-size: 15px;
+}
+
+.grades-icon {
+    font-size: 15px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+}
+
+h6 {
+    font-weight: 550;
+}
+
+.table th {
+    font-size: 0.85em;
+}
+
+.table td {
+    font-size: 0.90em;
+}
+
+.align-width {
+    width: 15%;
+}
+
+.table td.name-link {
+    color: red;
+}
+
+.arrow-bracket-button {
+    /* margin: 5px; */
+    align-items: center;
+    z-index: 2;
+    top: 5px;
+    right: 4px;
+    bottom: 7px;
+    font-size: 10px;
+}
+
+.arrow-bracket-icon {
+    margin-bottom: 7px;
+}
+
+.form-control:focus {
+    border-color: red;
+    color: black;
+    border-color: red;
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.45);
+    text-align: center;
+}
+
+.form-control::selection {
+    background-color: blue;
+    color: white;
+}
