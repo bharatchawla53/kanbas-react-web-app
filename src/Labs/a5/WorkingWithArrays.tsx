@@ -20,6 +20,7 @@ function WorkingWithArrays() {
     });
 
     const [todos, setTodos] = useState<Todo[]>([]);
+    const [errorMessage, setErrorMessage] = useState(null);
 
     const fetchTodos = async () => {
         const response = await
@@ -51,6 +52,35 @@ function WorkingWithArrays() {
         setTodos(response.data);
     };
 
+    const postTodo = async () => {
+        const response = await
+            axios.post(API, todo);
+        setTodos([...todos, response.data]);
+    }
+
+    const deleteTodo = async (todo: Todo) => {
+        try {
+            const response = await
+                axios.delete(`${API}/${todo.id}`);
+            setTodos(todos.filter((t) => t.id !== todo.id));
+        } catch (error: any) {
+            console.log(error);
+            setErrorMessage(error.response.data.message);
+        }
+
+    };
+
+    const updateTodo = async () => {
+        try {
+            const response = await
+                axios.put(`${API}/${todo.id}`, todo);
+            setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+        } catch (error: any) {
+            console.log(error);
+            setErrorMessage(error.response.data.message);
+        }
+    };
+
     useEffect(() => {
         fetchTodos();
     }, []);
@@ -78,6 +108,43 @@ function WorkingWithArrays() {
                     ...todo, title: e.target.value
                 })}
             />
+            <br />
+            <textarea
+                value={todo.description}
+                className="form-control"
+                onChange={(e) => setTodo({
+                    ...todo,
+                    description: e.target.value
+                })}
+            />
+            <br />
+            <input
+                value={todo.due}
+                type="date"
+                onChange={(e) => setTodo({
+                    ...todo,
+                    due: e.target.value
+                })}
+            />
+            <br />
+            <label>
+                <input
+                    value={todo.completed + ""}
+                    type="checkbox"
+                    onChange={(e) => setTodo({
+                        ...todo,
+                        completed: e.target.checked
+                    })} />
+                Completed
+            </label>
+            <br /><br />
+            <button onClick={postTodo}>
+                Post Todo
+            </button>
+            <br /><br />
+            <button onClick={updateTodo}>
+                Update Todo
+            </button>
             <br /><br />
             <button onClick={() => createTodo()}>
                 Create Todo
@@ -87,12 +154,25 @@ function WorkingWithArrays() {
                 Update Title
             </button>
             <br /><br />
+            {errorMessage && (
+                <div className="alert alert-danger mb-2 mt-2">
+                    {errorMessage}
+                </div>
+            )}
+            <br /><br />
             <ul>
                 {todos.map((todo) => (
-                    <li key={todo.id}>
-                        {todo.title}&nbsp;&nbsp;
-                        <button onClick={() => removeTodo(todo)}>
-                            Remove
+                    <li key={todo.id} className="list-group-item">
+                        <input
+                            checked={todo.completed}
+                            type="checkbox"
+                            readOnly />
+                        {todo.title}
+                        <p>{todo.description}</p>
+                        <p>{todo.due}</p>
+
+                        <button onClick={() => deleteTodo(todo)}>
+                            Delete
                         </button>
                         &nbsp;&nbsp;
                         <button onClick={() => fetchTodoById(todo.id)} >
