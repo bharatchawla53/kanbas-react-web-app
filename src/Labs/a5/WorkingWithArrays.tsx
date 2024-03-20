@@ -1,14 +1,59 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+interface Todo {
+    id: string,
+    title: string,
+    description: string,
+    due: string,
+    completed: boolean
+}
 
 function WorkingWithArrays() {
     const API = "http://localhost:4000/a5/todos";
-    const [todo, setTodo] = useState({
+    const [todo, setTodo] = useState<Todo>({
         id: "1",
         title: "NodeJS Assignment",
         description: "Create a NodeJS server with ExpressJS",
         due: "2021-09-09",
         completed: false,
     });
+
+    const [todos, setTodos] = useState<Todo[]>([]);
+
+    const fetchTodos = async () => {
+        const response = await
+            axios.get(API);
+        setTodos(response.data);
+    };
+
+    const removeTodo = async (todo: Todo) => {
+        const response = await
+            axios.get(`${API}/${todo.id}/delete`);
+        setTodos(response.data);
+    };
+
+    const createTodo = async () => {
+        const response = await
+            axios.get(`${API}/create`);
+        setTodos(response.data);
+    };
+
+    const fetchTodoById = async (id: string) => {
+        const response = await
+            axios.get(`${API}/${id}`);
+        setTodo(response.data);
+    };
+
+    const updateTitle = async () => {
+        const response = await
+            axios.get(`${API}/${todo.id}/title/${todo.title}`);
+        setTodos(response.data);
+    };
+
+    useEffect(() => {
+        fetchTodos();
+    }, []);
 
     return (
         <div>
@@ -17,6 +62,45 @@ function WorkingWithArrays() {
             <a href={API}>
                 Get Todos
             </a>
+            <br /><br />
+            <input
+                className="form-control"
+                value={todo.id}
+                onChange={(e) => setTodo({
+                    ...todo,
+                    id: e.target.value
+                })} />
+            <br />
+            <input
+                className="form-control"
+                value={todo.title}
+                onChange={(e) => setTodo({
+                    ...todo, title: e.target.value
+                })}
+            />
+            <br /><br />
+            <button onClick={() => createTodo()}>
+                Create Todo
+            </button>
+            <br /><br />
+            <button onClick={() => updateTitle()}>
+                Update Title
+            </button>
+            <br /><br />
+            <ul>
+                {todos.map((todo) => (
+                    <li key={todo.id}>
+                        {todo.title}&nbsp;&nbsp;
+                        <button onClick={() => removeTodo(todo)}>
+                            Remove
+                        </button>
+                        &nbsp;&nbsp;
+                        <button onClick={() => fetchTodoById(todo.id)} >
+                            Edit
+                        </button>
+                    </li>
+                ))}
+            </ul>
             <br /><br />
             <h4>Retrieving an Item from an Array by ID</h4>
             <input
