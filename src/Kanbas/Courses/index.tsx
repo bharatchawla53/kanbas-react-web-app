@@ -8,12 +8,11 @@ import Grades from "./Grades";
 import MobileNavigation from "./MobileNavigation";
 import BreadcrumbNav from "./BreadcrumbNav/breadcrumbNav";
 import "./index.css"
-import { Course } from "../Interfaces/course";
 
-function Courses({ courses }: { courses: Course[] }) {
+function Courses() {
     return (
         <div className="course-main">
-            <BreadcrumbNav courses={courses} />
+            <BreadcrumbNav />
 
             <div className="d-block d-md-none mb-3 mobile-navbar">
                 <MobileNavigation />

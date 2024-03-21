@@ -4,12 +4,14 @@ import { Link, useLocation } from "react-router-dom";
 import { useParams } from "react-router";
 import "./breadcrumbNav.css"
 import { Course } from "../../Interfaces/course";
+import { useEffect, useState } from "react";
+import axios, { AxiosResponse } from "axios";
 
-function BreadcrumbNav({ courses }: { courses: Course[] }) {
+function BreadcrumbNav() {
+    const COURSES_API = "http://localhost:4000/api/courses";
 
     const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
-
+    const [course, setCourse] = useState<Course>();
     const { pathname } = useLocation();
     const pathParts = decodeURIComponent(pathname).split("/");
     const activeBreadcrumb = pathParts[pathParts.length - 1];
@@ -22,6 +24,17 @@ function BreadcrumbNav({ courses }: { courses: Course[] }) {
         idMatch = pathname.match(/\/([^/]+)$/);
         assignmentId = idMatch ? idMatch[1] : null;
     }
+
+    const findCourseById = async (courseId?: string) => {
+        const response: AxiosResponse<Course> = await
+            axios.get<Course>(`${COURSES_API}/${courseId}`);
+        setCourse(response.data);
+    };
+
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
+
 
     console.log("activeBreadcrumb:", activeBreadcrumb);
     console.log("isAssignmentPath:", isAssignmentPath);
