@@ -3,14 +3,14 @@ import { FaGlasses } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { useParams } from "react-router";
 import "./breadcrumbNav.css"
-import { Course } from "../../Interfaces/course";
+import { ICourse } from "../../Interfaces/course";
 import { useEffect, useState } from "react";
 import * as api from "../api";
 
 function BreadcrumbNav() {
 
     const { courseId } = useParams();
-    const [course, setCourse] = useState<Course>();
+    const [course, setCourse] = useState<ICourse>();
     const { pathname } = useLocation();
     const pathParts = decodeURIComponent(pathname).split("/");
     const activeBreadcrumb = pathParts[pathParts.length - 1];

@@ -1,18 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { Module } from "../Interfaces/module";
+import { IModule } from "../Interfaces/module";
 import modulesReducer from "../Courses/Modules/modulesReducer";
 import assignmentReducer from "../Courses/Assignments/assignmentsReducer";
-import { Assignment } from "../Interfaces/assignment";
+import { IAssignment } from "../Interfaces/assignment";
 
 export interface KanbasState {
     modulesReducer: {
-        modules: Module[];
-        module: Module;
+        modules: IModule[];
+        module: IModule;
     };
 
     assignmentReducer: {
-        assignments: Assignment[];
-        assignment: Assignment;
+        assignments: IAssignment[];
+        assignment: IAssignment;
     };
 }
 const store = configureStore({

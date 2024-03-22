@@ -6,12 +6,12 @@ import Account from "./Account";
 import React, { useEffect, useState } from "react";
 import store from "./Store";
 import { Provider } from "react-redux";
-import { Course } from "./Interfaces/course";
+import { ICourse } from "./Interfaces/course";
 import * as api from "./Courses/api";
 
 function Kanbas() {
 
-    const [courses, setCourses] = useState<Course[]>([]);
+    const [courses, setCourses] = useState<ICourse[]>([]);
 
     const [course, setCourse] = useState({
         _id: "0",

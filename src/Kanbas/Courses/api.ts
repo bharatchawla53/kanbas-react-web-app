@@ -1,18 +1,18 @@
 import axios, { AxiosResponse } from "axios";
-import { Course } from "../Interfaces/course";
+import { ICourse } from "../Interfaces/course";
 
 const COURSES_API = "http://localhost:4000/api/courses";
 
 export const fetchCourses = async () => {
-    const response: AxiosResponse<Course[]> = await
-        axios.get<Course[]>(COURSES_API);
+    const response: AxiosResponse<ICourse[]> = await
+        axios.get<ICourse[]>(COURSES_API);
 
     return response.data;
 };
 
-export const addNewCourse = async (course: Course) => {
-    const response: AxiosResponse<Course> = await
-        axios.post<Course>(COURSES_API, course);
+export const addNewCourse = async (course: ICourse) => {
+    const response: AxiosResponse<ICourse> = await
+        axios.post<ICourse>(COURSES_API, course);
 
     return response.data;
 };
@@ -24,7 +24,7 @@ export const deleteCourse = async (courseId: string) => {
     return response.data;
 }
 
-export const updateCourse = async (course: Course) => {
+export const updateCourse = async (course: ICourse) => {
     const response = await
         axios.put(`${COURSES_API}/${course._id}`, course);
 
@@ -32,8 +32,8 @@ export const updateCourse = async (course: Course) => {
 }
 
 export const fetchCourseById = async (courseId?: string) => {
-    const response: AxiosResponse<Course> = await
-        axios.get<Course>(`${COURSES_API}/${courseId}`);
+    const response: AxiosResponse<ICourse> = await
+        axios.get<ICourse>(`${COURSES_API}/${courseId}`);
 
     return response.data;
 };

@@ -5,14 +5,14 @@ import { useParams } from "react-router-dom";
 import { assignments, enrollments, grades, users } from "../../Database";
 import { useState } from "react";
 import "./index.css"
-import { Assignment } from "../../Interfaces/assignment";
-import { Enrollment } from "../../Interfaces/enrollment";
+import { IAssignment } from "../../Interfaces/assignment";
+import { IEnrollment } from "../../Interfaces/enrollment";
 
 function Grades() {
 
     const { courseId } = useParams();
-    const assignment: Assignment[] = assignments.filter((assignment) => assignment.course === courseId);
-    const enrollment: Enrollment[] = enrollments.filter((enrollment) => enrollment.course === courseId);
+    const assignment: IAssignment[] = assignments.filter((assignment) => assignment.course === courseId);
+    const enrollment: IEnrollment[] = enrollments.filter((enrollment) => enrollment.course === courseId);
 
     // use state if grade input field is selected
     const [selectedGradeId, setSelectedGradeId] = useState('');

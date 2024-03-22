@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaEllipsisV, FaCheckCircle, FaPlus, FaPlusCircle, FaBan, FaSortDown, FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { CiCircleCheck } from "react-icons/ci";
@@ -7,11 +7,12 @@ import { useLocation } from "react-router-dom";
 import "./moduleList.css";
 import "./../../style.css";
 import AddModule from "./addModule";
-import { Module } from "../../Interfaces/module";
+import { IModule } from "../../Interfaces/module";
 import EditModule from "./editModule";
 import { useSelector, useDispatch } from "react-redux";
 import { KanbasState } from "../../Store";
-import { deleteModule, setModule } from "./modulesReducer";
+import { deleteModule, setModule, setModules } from "./modulesReducer";
+import * as api from "./api";
 
 function ModuleList() {
 
@@ -42,7 +43,7 @@ function ModuleList() {
         setShowDropdown(!showDropdown);
     }
 
-    const handleDropdownSelectedOption = (selectedItem: string, module: Module) => {
+    const handleDropdownSelectedOption = (selectedItem: string, module: IModule) => {
         console.log(selectedItem);
 
         switch (selectedItem) {
@@ -55,6 +56,13 @@ function ModuleList() {
                 break;
         }
     }
+
+    useEffect(() => {
+        api.fetchModulesForCourse(courseId)
+            .then((modules) =>
+                dispatch(setModules(modules))
+            );
+    }, [courseId]);
 
     return (
         <div className={`${activeCourseTab === 'Home' ? 'col-xxl-9' : ''} col-12`}>
@@ -147,7 +155,7 @@ function ModuleList() {
 
                                 </div>
                             </div>
-                            {
+                            {selectedModule &&
                                 selectedModule._id === module._id && (
                                     <>
                                         {module.lessons?.map((lesson, index) => (

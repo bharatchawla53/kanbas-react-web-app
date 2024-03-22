@@ -3,11 +3,11 @@ import { FaEllipsisVertical, FaFilePen } from "react-icons/fa6";
 import MobileNavigation from '../Courses/MobileNavigation';
 import { MdDelete, MdEdit } from "react-icons/md";
 import './index.css';
-import { Course } from "../Interfaces/course";
+import { ICourse } from "../Interfaces/course";
 
 function Dashboard({ courses, course, setCourse, addNewCourse,
     deleteCourse, updateCourse }: {
-        courses: Course[], course: Course, setCourse: (course: Course) => void,
+        courses: ICourse[], course: ICourse, setCourse: (course: ICourse) => void,
         addNewCourse: () => void, deleteCourse: (courseId: string) => void, updateCourse: () => void
     }
 ) {

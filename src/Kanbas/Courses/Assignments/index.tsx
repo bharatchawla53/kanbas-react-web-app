@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectAssignment } from "./assignmentsReducer";
 import { useState } from "react";
 import { MdDelete } from "react-icons/md";
-import { Assignment } from "../../Interfaces/assignment";
+import { IAssignment } from "../../Interfaces/assignment";
 import DeleteAssignment from "./deleteAssignment";
 
 function Assignments() {
@@ -33,7 +33,7 @@ function Assignments() {
         );
     }
 
-    const handleDropdownSelectedOption = (selectedItem: string, assignment: Assignment) => {
+    const handleDropdownSelectedOption = (selectedItem: string, assignment: IAssignment) => {
         console.log(selectedItem);
         setShowDropdowns(Array(assignmentList.length).fill(false));
 

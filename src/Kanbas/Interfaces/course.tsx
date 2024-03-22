@@ -1,4 +1,4 @@
-export interface Course {
+export interface ICourse {
     _id: string;
     name: string;
     number: string;

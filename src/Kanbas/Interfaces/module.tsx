@@ -1,9 +1,9 @@
-import { Lesson } from "./lesson";
+import { ILesson } from "./lesson";
 
-export interface Module {
+export interface IModule {
     _id: string;
     name: string;
     description: string;
     course: string;
-    lessons: Lesson[];
+    lessons?: ILesson[];
 }

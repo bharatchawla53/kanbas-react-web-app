@@ -1,4 +1,4 @@
-export interface Assignment {
+export interface IAssignment {
     _id: string;
     title: string;
     course: string;
