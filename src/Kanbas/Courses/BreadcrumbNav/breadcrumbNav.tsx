@@ -5,10 +5,9 @@ import { useParams } from "react-router";
 import "./breadcrumbNav.css"
 import { Course } from "../../Interfaces/course";
 import { useEffect, useState } from "react";
-import axios, { AxiosResponse } from "axios";
+import * as api from "../api";
 
 function BreadcrumbNav() {
-    const COURSES_API = "http://localhost:4000/api/courses";
 
     const { courseId } = useParams();
     const [course, setCourse] = useState<Course>();
@@ -26,9 +25,8 @@ function BreadcrumbNav() {
     }
 
     const findCourseById = async (courseId?: string) => {
-        const response: AxiosResponse<Course> = await
-            axios.get<Course>(`${COURSES_API}/${courseId}`);
-        setCourse(response.data);
+        const course = await api.fetchCourseById(courseId);
+        setCourse(course);
     };
 
     useEffect(() => {
