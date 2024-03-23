@@ -1,11 +1,11 @@
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { assignments } from "../../../Database";
 import { FaCheckCircle, FaEllipsisV, FaPlus } from "react-icons/fa";
 import "./../../../style.css";
 import "./index.css";
 import { KanbasState } from "../../../Store";
 import { useSelector, useDispatch } from "react-redux";
 import { addAssignment, selectAssignment, updateAssignment } from "../assignmentsReducer";
+import * as api from "./../api";
 
 function AssignmentEditor() {
     const { assignmentId, courseId } = useParams();
@@ -14,12 +14,16 @@ function AssignmentEditor() {
     const dispatch = useDispatch();
 
     // save function to return back to assignments list
-    const handleSave = (e: React.SyntheticEvent<any>) => {
+    const handleSave = async (e: React.SyntheticEvent<any>) => {
         e.preventDefault();
         if (assignmentId === "new") {
-            dispatch(addAssignment({ ...assignment, course: courseId }));
+            await api.createAssignment(courseId, assignment)
+                .then((assignment) => dispatch(addAssignment(assignment)));
         } else {
-            dispatch(updateAssignment({ assignment }));
+            await api.updateAssignment(assignment)
+                .then((assignment) => {
+                    dispatch(updateAssignment(assignment))
+                });
         }
         console.log("Saving assignment successful!");
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);

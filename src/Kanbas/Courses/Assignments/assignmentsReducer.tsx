@@ -1,19 +1,33 @@
-import { assignments } from "../../Database";
 import { createSlice } from "@reduxjs/toolkit";
+import { IAssignment } from "../../Interfaces/assignment";
 
-const initialState = {
-    assignments: assignments,
+interface InitialState {
+    assignments: IAssignment[],
+    assignment: IAssignment;
+}
+
+const initialState: InitialState = {
+    assignments: [],
     assignment: {
+        _id: "",
+        course: "",
+        dueDate: "",
+        dueTime: "",
+        availableFrom: "",
+        availableUntil: "",
         title: "New Assignment",
         description: "New Assignment Description",
         points: 100
-    },
+    }
 };
 
 const assignmentsSlice = createSlice({
     name: "assignments",
     initialState,
     reducers: {
+        setAssignments: (state, action) => {
+            state.assignments = action.payload;
+        },
         addAssignment: (state, action) => {
             state.assignments = [
                 { ...action.payload, _id: new Date().getTime().toString() },
@@ -27,8 +41,9 @@ const assignmentsSlice = createSlice({
         },
         updateAssignment: (state, action) => {
             state.assignments = state.assignments.map((assignment) => {
-                if (assignment._id === action.payload.assignment._id) {
-                    return action.payload.assignment;
+                console.log(assignment._id);
+                if (assignment._id === action.payload._id) {
+                    return action.payload;
                 } else {
                     return assignment;
                 }
@@ -37,8 +52,19 @@ const assignmentsSlice = createSlice({
         selectAssignment: (state, action) => {
             state.assignment = action.payload;
         },
+        resetAssignmentForm: (state) => {
+            state.assignment._id = "";
+            state.assignment.course = "";
+            state.assignment.dueDate = "";
+            state.assignment.dueTime = "";
+            state.assignment.availableFrom = "";
+            state.assignment.availableUntil = "";
+            state.assignment.title = "New Assignment";
+            state.assignment.description = "New Assignment Description";
+            state.assignment.points = 100;
+        }
     },
 });
 
-export const { addAssignment, deleteAssignment, updateAssignment, selectAssignment } = assignmentsSlice.actions;
+export const { setAssignments, addAssignment, deleteAssignment, updateAssignment, selectAssignment, resetAssignmentForm } = assignmentsSlice.actions;
 export default assignmentsSlice.reducer;

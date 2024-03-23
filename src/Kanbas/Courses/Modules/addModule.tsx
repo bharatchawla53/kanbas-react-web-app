@@ -14,8 +14,8 @@ function AddModule({ courseId, show, setShow }: {
     const module = useSelector((state: KanbasState) => state.modulesReducer.module);
     const dispatch = useDispatch();
 
-    const handleAddModule = () => {
-        api.createModule(courseId, module)
+    const handleAddModule = async () => {
+        await api.createModule(courseId, module)
             .then((module) => {
                 dispatch(addModule(module));
             })

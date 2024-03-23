@@ -57,7 +57,6 @@ function ModuleList() {
                 await api.deleteModule(module._id)
                     .then((status) => {
                         dispatch(deleteModule(module._id));
-
                     })
                 break;
         }

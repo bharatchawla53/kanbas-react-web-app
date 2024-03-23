@@ -5,11 +5,12 @@ import "./index.css";
 import "./../../style.css";
 import { KanbasState } from "../../Store";
 import { useSelector, useDispatch } from "react-redux";
-import { selectAssignment } from "./assignmentsReducer";
-import { useState } from "react";
+import { deleteAssignment, resetAssignmentForm, selectAssignment, setAssignments, updateAssignment } from "./assignmentsReducer";
+import { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
 import { IAssignment } from "../../Interfaces/assignment";
 import DeleteAssignment from "./deleteAssignment";
+import * as api from "./api";
 
 function Assignments() {
 
@@ -22,8 +23,7 @@ function Assignments() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const assignmentList = useSelector((state: KanbasState) => state.assignmentReducer.assignments)
-        .filter((assignment) => assignment.course === courseId);
+    const assignmentList = useSelector((state: KanbasState) => state.assignmentReducer.assignments);
     const [showDropdowns, setShowDropdowns] = useState(Array(assignmentList.length).fill(false));
     const [showDeleteModal, setShowDeleteModal] = useState(false);
 
@@ -33,21 +33,26 @@ function Assignments() {
         );
     }
 
-    const handleDropdownSelectedOption = (selectedItem: string, assignment: IAssignment) => {
-        console.log(selectedItem);
+    const handleDropdownSelectedOption = async (selectedItem: string, assignment: IAssignment) => {
+        dispatch(selectAssignment(assignment));
         setShowDropdowns(Array(assignmentList.length).fill(false));
 
         switch (selectedItem) {
             case 'Edit':
-                dispatch(selectAssignment(assignment));
                 navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`);
                 break;
             case 'Delete':
-                dispatch(selectAssignment(assignment));
                 setShowDeleteModal(true);
                 break;
         }
     }
+
+    useEffect(() => {
+        api.fetchAssignmentsForCourse(courseId)
+            .then((assignments) =>
+                dispatch(setAssignments(assignments))
+            );
+    }, [courseId]);
 
     return (
         <div className="container-fluid d-flex flex-row me-5">
@@ -62,7 +67,10 @@ function Assignments() {
                             <FaPlus className="me-1 custom-icon" />
                             Group
                         </button>
-                        <Link to={`/Kanbas/Courses/${courseId}/Assignments/new`} className="btn btn-danger me-1 custom-btn">
+                        <Link
+                            to={`/Kanbas/Courses/${courseId}/Assignments/new`}
+                            onClick={() => dispatch(resetAssignmentForm())}
+                            className="btn btn-danger me-1 custom-btn">
                             <FaPlus className="me-1 custom-icon" />
                             Assignment
                         </Link>

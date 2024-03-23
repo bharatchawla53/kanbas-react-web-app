@@ -2,6 +2,7 @@ import Modal from 'react-bootstrap/Modal';
 import { useDispatch, useSelector } from "react-redux";
 import { deleteAssignment } from "./assignmentsReducer";
 import { KanbasState } from "../../Store";
+import * as api from "./api";
 
 function DeleteAssignment({ show, setShow }:
     {
@@ -12,11 +13,12 @@ function DeleteAssignment({ show, setShow }:
     const assignment = useSelector((state: KanbasState) => state.assignmentReducer.assignment);
     const dispatch = useDispatch();
 
-    console.log(assignment._id);
-
-    const handleConfirmation = () => {
-        dispatch(deleteAssignment(assignment._id));
-        setShow(false);
+    const handleConfirmation = async () => {
+        await api.deleteAssignment(assignment._id)
+            .then((status) => {
+                dispatch(deleteAssignment(assignment._id));
+                setShow(false);
+            });
     }
 
     return (
