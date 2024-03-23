@@ -11,7 +11,7 @@ import { IModule } from "../../Interfaces/module";
 import EditModule from "./editModule";
 import { useSelector, useDispatch } from "react-redux";
 import { KanbasState } from "../../Store";
-import { deleteModule, setModule, setModules } from "./modulesReducer";
+import { deleteModule, resetModuleForm, setModule, setModules, updateModule } from "./modulesReducer";
 import * as api from "./api";
 
 function ModuleList() {
@@ -36,6 +36,7 @@ function ModuleList() {
     const activeCourseTab = pathParts[pathParts.length - 1];
 
     const handleShowModuleClick = () => {
+        dispatch(resetModuleForm());
         setShowModule(true);
     };
 
@@ -43,16 +44,21 @@ function ModuleList() {
         setShowDropdown(!showDropdown);
     }
 
-    const handleDropdownSelectedOption = (selectedItem: string, module: IModule) => {
+    const handleDropdownSelectedOption = async (selectedItem: string, module: IModule) => {
         console.log(selectedItem);
 
         switch (selectedItem) {
             case 'Edit':
-                dispatch(setModule(module));
+                const status = await api.updateModule(module);
+                dispatch(updateModule(module));
                 setShowUpdateModule(!showUpdateModule);
                 break;
             case 'Delete':
-                dispatch(deleteModule(module._id));
+                await api.deleteModule(module._id)
+                    .then((status) => {
+                        dispatch(deleteModule(module._id));
+
+                    })
                 break;
         }
     }
@@ -109,7 +115,11 @@ function ModuleList() {
                     .filter((module) => module.course === courseId)
                     .map((module, index) => (
                         <div className="list-group p-0 mb-5 rounded-0">
-                            <div className="d-flex list-group-item" key={index} onClick={() => setSelectedModule(module)}>
+                            <div className="d-flex list-group-item" key={index} onClick={() => {
+                                setSelectedModule(module);
+                                dispatch(setModule(module));
+                            }}
+                            >
                                 <div className="d-flex align-items-center">
                                     <FaEllipsisV />
                                     <FaEllipsisV className="no-spacing-ellipsis" />

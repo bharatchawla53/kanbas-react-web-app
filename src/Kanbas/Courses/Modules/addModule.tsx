@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import { useSelector, useDispatch } from "react-redux";
 import { KanbasState } from '../../Store';
 import { addModule, setModule } from './modulesReducer';
+import * as api from "./api";
 
 function AddModule({ courseId, show, setShow }: {
     courseId: string;
@@ -14,7 +15,10 @@ function AddModule({ courseId, show, setShow }: {
     const dispatch = useDispatch();
 
     const handleAddModule = () => {
-        dispatch(addModule({ ...module, course: courseId }))
+        api.createModule(courseId, module)
+            .then((module) => {
+                dispatch(addModule(module));
+            })
         setShow(false);
     }
 

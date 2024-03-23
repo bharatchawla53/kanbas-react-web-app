@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { useState } from "react";
 import { setModule, updateModule } from "./modulesReducer";
+import * as api from "./api";
 
 function EditModule({ show, setShow }: {
     show: boolean;
@@ -13,7 +14,8 @@ function EditModule({ show, setShow }: {
     const module = useSelector((state: KanbasState) => state.modulesReducer.module);
     const dispatch = useDispatch();
 
-    const handleUpdateModule = () => {
+    const handleUpdateModule = async () => {
+        const status = await api.updateModule(module);
         dispatch(updateModule(module));
         setShow(false);
     }

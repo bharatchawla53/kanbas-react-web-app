@@ -9,9 +9,9 @@ interface InitialState {
 const initialState: InitialState = {
     modules: [],
     module: {
-        _id: "1",
+        _id: "",
         course: "",
-        name: "New Module 123",
+        name: "New Module",
         description: "New Description",
     }
 };
@@ -46,9 +46,16 @@ const modulesSlice = createSlice({
         setModule: (state, action) => {
             state.module = action.payload;
         },
+        resetModuleForm: (state) => {
+            state.module._id = "";
+            state.module.course = "";
+            state.module.name = "New Module";
+            state.module.description = "New Module Description";
+            state.module.lessons = [];
+        },
     },
 });
 
 
-export const { addModule, deleteModule, updateModule, setModule, setModules } = modulesSlice.actions;
+export const { addModule, deleteModule, updateModule, setModule, setModules, resetModuleForm } = modulesSlice.actions;
 export default modulesSlice.reducer;
