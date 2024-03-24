@@ -1,8 +1,9 @@
 import axios, { AxiosResponse } from "axios";
 import { IModule } from "../../Interfaces/module";
 
-const COURSES_API = "http://localhost:4000/api/courses";
-const MODULES_API = "http://localhost:4000/api/modules";
+const API_BASE = process.env.REACT_APP_API_BASE;
+const COURSES_API = `${API_BASE}/api/courses`;
+const MODULES_API = `${API_BASE}/api/modules`;
 
 export const fetchModulesForCourse = async (courseId: any) => {
     const response: AxiosResponse<IModule[]> = await

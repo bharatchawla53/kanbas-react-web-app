@@ -1,7 +1,10 @@
 import axios, { AxiosResponse } from "axios";
 import { ICourse } from "../Interfaces/course";
 
-const COURSES_API = "http://localhost:4000/api/courses";
+const API_BASE = process.env.REACT_APP_API_BASE;
+const COURSES_API = `${API_BASE}/api/courses`;
+
+console.log(API_BASE);
 
 export const fetchCourses = async () => {
     const response: AxiosResponse<ICourse[]> = await
